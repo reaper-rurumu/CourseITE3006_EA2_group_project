@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- These paths go up one folder to reuse the root styles, images, and scripts. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Explore GreenSteps sample activities: coastal cleanups, planting sessions, and practical waste reduction workshops.">
+  <meta name="theme-color" content="#173b2c">
+  <title>Our Activities — GreenSteps</title>
+  <link rel="icon" href="../assets/images/leaf.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="../assets/vendor/bootstrap.bundle.min.js" defer></script>
+  <script src="../script.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <!-- Bootstrap's Collapse plugin controls this accessible mobile menu. -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg container" aria-label="Main navigation">
+      <a class="navbar-brand" href="../index.html"><img class="brand-icon" src="../assets/images/leaf.svg" alt=""
+          width="30" height="34">greensteps.</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation"
+        aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="main-navigation">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html" aria-current="page">Our activities</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#our-purpose">Our purpose</a></li>
+          <li class="nav-item"><a class="btn btn-forest nav-join" href="../join/index.html">Join the club <span
+                class="ms-2" aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main id="main-content">
+    <section class="page-intro">
+      <div class="container">
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Our activities</li>
+          </ol>
+        </nav>
+        <span class="eyebrow">Find your kind of action</span>
+        <h1>A little time.<br>A world of possibility.</h1>
+        <p class="mt-4">Outdoors or around a table, there is a way for everyone to get involved. Choose something that
+          sparks your curiosity.</p>
+        <p class="demo-label mb-0">Educational demo: the following activities are sample ideas, not scheduled events or
+          confirmed bookings.</p>
+      </div>
+    </section>
+    <section class="section-space" aria-labelledby="activity-list-title">
+      <div class="container">
+        <h2 class="visually-hidden" id="activity-list-title">Explore our sample activities</h2>
+        <!-- Disabled buttons become available only after the filter script initializes. -->
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+          <div class="filter-bar" role="group" aria-label="Filter activities by category">
+            <button class="filter-button" type="button" data-filter="all" aria-pressed="true" disabled>All
+              activities</button>
+            <button class="filter-button" type="button" data-filter="conservation" aria-pressed="false"
+              disabled>Conservation</button>
+            <button class="filter-button" type="button" data-filter="biodiversity" aria-pressed="false"
+              disabled>Biodiversity</button>
+            <button class="filter-button" type="button" data-filter="everyday" aria-pressed="false" disabled>Everyday
+              action</button>
+          </div>
+          <p class="results-count" id="filter-status" role="status" aria-live="polite" aria-atomic="true">Showing 3 of 3
+            activities.</p>
+        </div>
+        <noscript>
+          <p>JavaScript is off, so all activities are shown and category filters are unavailable.</p>
+        </noscript>
+        <!-- Cards stay in the document when filtered, preserving their original content. -->
+        <div class="row g-4 activity-grid">
+          <div class="col-md-6 col-lg-4" data-activity data-category="conservation">
+            <article class="card activity-card" id="coastline">
+              <img class="activity-image" src="../assets/images/coast.jpg"
+                alt="A bright sandy coastline beside clear blue water" width="1000" height="667">
+              <div class="card-body d-flex flex-column"><span class="activity-category">Conservation · Outdoors</span>
+                <h3>A cleaner coastline</h3>
+                <p>Explore where litter comes from and learn how a cleanup can protect a place we all enjoy.</p>
+                <ul>
+                  <li>Learn responsible litter collection</li>
+                  <li>Record common types of waste</li>
+                  <li>Reflect on ways to prevent litter</li>
+                </ul>
+                <div class="activity-meta mt-auto">Sample format · Half-day · Beginner friendly</div>
+                <a class="btn btn-forest" href="../join/index.html?activity=cleanup">I'm interested <span class="ms-2"
+                    aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4" data-activity data-category="biodiversity">
+            <article class="card activity-card" id="planting">
+              <img class="activity-image" src="../assets/images/planting.jpg"
+                alt="A hand trowel and potting soil on a gardening table" width="1000" height="667">
+              <div class="card-body d-flex flex-column"><span class="activity-category">Biodiversity · Hands-on</span>
+                <h3>Room to grow</h3>
+                <p>Discover the small details of plant care and the value of choosing plants suited to their
+                  surroundings.</p>
+                <ul>
+                  <li>Explore thoughtful plant selection</li>
+                  <li>Practise potting and watering</li>
+                  <li>Make a simple ongoing care plan</li>
+                </ul>
+                <div class="activity-meta mt-auto">Sample format · Two hours · Beginner friendly</div>
+                <a class="btn btn-forest" href="../join/index.html?activity=planting">I'm interested <span class="ms-2"
+                    aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4" data-activity data-category="everyday">
+            <article class="card activity-card" id="workshop">
+              <img class="activity-image" src="../assets/images/circular.svg"
+                alt="Illustration of reusable everyday objects and a potted plant" width="800" height="500">
+              <div class="card-body d-flex flex-column"><span class="activity-category">Everyday action ·
+                  Workshop</span>
+                <h3>Waste less. Live more.</h3>
+                <p>Bring your everyday questions and leave with a practical idea you can try this week.</p>
+                <ul>
+                  <li>Compare reusable alternatives</li>
+                  <li>Discuss local recycling guidance</li>
+                  <li>Choose one achievable habit</li>
+                </ul>
+                <div class="activity-meta mt-auto">Sample format · Ninety minutes · Indoors</div>
+                <a class="btn btn-forest" href="../join/index.html?activity=workshop">I'm interested <span class="ms-2"
+                    aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-space preparation" aria-labelledby="prepare-title">
+      <div class="container">
+        <span class="eyebrow">First time? You're welcome here.</span>
+        <h2 class="section-title mb-5" id="prepare-title">Bring your curiosity.<br>We'll start there.</h2>
+        <div class="row g-4">
+          <div class="col-md-4"><span class="step-marker" aria-hidden="true">01</span>
+            <h3>Pick an interest</h3>
+            <p>Choose the activity that feels right for you. No previous experience is needed for these sample sessions.
+            </p>
+          </div>
+          <div class="col-md-4"><span class="step-marker" aria-hidden="true">02</span>
+            <h3>Think ahead</h3>
+            <p>For a real outdoor event, check the organizer's weather, clothing, accessibility, and equipment guidance.
+            </p>
+          </div>
+          <div class="col-md-4"><span class="step-marker" aria-hidden="true">03</span>
+            <h3>Keep the conversation going</h3>
+            <p>Share what you learn, ask questions, and try one small change in your everyday routine.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-space">
+      <div class="container">
+        <div class="resource-box d-lg-flex justify-content-between align-items-center gap-4">
+          <div>
+            <h2>Curiosity does not stop here.</h2>
+            <p class="mb-lg-0">Explore environmental stories and ideas from the United Nations Environment Programme.
+            </p>
+          </div>
+          <a class="btn btn-outline-forest flex-shrink-0" href="https://www.unep.org/" target="_blank"
+            rel="noopener noreferrer">Explore UNEP ↗ <span class="visually-hidden">(opens in a new tab)</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6"><a class="navbar-brand" href="../index.html"><img class="brand-icon"
+              src="../assets/images/leaf.svg" alt="" width="30" height="34">greensteps.</a>
+          <p class="footer-copy">Small actions. Shared purpose.<br>A student community for a greener tomorrow.</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h2 class="footer-heading">Find your way</h2>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="index.html">Our activities</a></li>
+            <li><a href="../join/index.html">Join the club</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h2 class="footer-heading">Keep exploring</h2>
+          <ul class="footer-links">
+            <li><a href="https://www.unep.org/" target="_blank" rel="noopener noreferrer">UN Environment Programme ↗
+                <span class="visually-hidden">(opens in a new tab)</span></a></li>
+            <li><a href="https://www.worldwildlife.org/" target="_blank" rel="noopener noreferrer">World Wildlife Fund ↗
+                <span class="visually-hidden">(opens in a new tab)</span></a></li>
+            <li><a href="../CREDITS.md">Image &amp; library credits</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 GreenSteps · A fictional club for an educational project.</span><span>Made
+          with care for our shared home.</span></div>
+    </div>
+  </footer>
+</body>
+
+</html>

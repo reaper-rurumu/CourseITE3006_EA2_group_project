@@ -1,0 +1,85 @@
+/* Filter buttons expose their selection visually and through aria-pressed in HTML. */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .65rem;
+}
+
+.filter-button {
+    border: 1px solid #c5d0bd;
+    background: transparent;
+    color: var(--forest);
+    border-radius: 30px;
+    padding: .6rem 1.1rem;
+    font-size: .8rem;
+    transition: background-color .2s ease;
+}
+
+.filter-button:hover {
+    background: #e6edda;
+}
+
+.filter-button[aria-pressed="true"] {
+    background: var(--forest);
+    border-color: var(--forest);
+    color: #fff;
+}
+
+.filter-button:disabled {
+    opacity: .65;
+}
+
+/* The hidden attribute must win over Bootstrap display utilities when filtering. */
+[data-activity][hidden] {
+    display: none !important;
+}
+
+.results-count {
+    color: var(--muted);
+    font-size: .8rem;
+    margin-bottom: 0;
+}
+
+.activity-card ul {
+    color: var(--muted);
+    font-size: .85rem;
+    padding-left: 1.1rem;
+}
+
+.activity-card .btn {
+    width: 100%;
+}
+
+.activity-image {
+    height: 250px;
+}
+
+.activity-grid {
+    scroll-margin-top: 2rem;
+}
+
+/* Short preparation notes remain readable in a balanced responsive layout. */
+.preparation {
+    background: #edf0e6;
+}
+
+.preparation h3 {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.preparation p {
+    font-size: .87rem;
+    color: var(--muted);
+}
+
+.step-marker {
+    border: 1px solid #bdcbb1;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    font-family: Georgia, serif;
+    font-size: .9rem;
+}

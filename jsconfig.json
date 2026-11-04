@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "allowJs": true,
+    "strict": true,
+    "noEmit": true,
+    "target": "ES2017",
+    "lib": ["ES2017", "DOM", "DOM.Iterable"]
+  },
+  "include": ["script.js", "activities/script.js", "join/script.js"],
+  "exclude": ["assets/vendor"]
+}

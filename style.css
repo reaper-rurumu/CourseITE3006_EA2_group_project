@@ -1,0 +1,655 @@
+/* These colours keep Bootstrap components and our own styles on the same theme. */
+:root {
+  --forest: #173b2c;
+  --forest-deep: #102b21;
+  --lime: #d7ed9c;
+  --paper: #f8f8f0;
+  --ink: #233b30;
+  --muted: #5b6b60;
+  --line: #dce2d5;
+  --bs-body-font-family: "Segoe UI", Arial, sans-serif;
+  --bs-body-color: var(--ink);
+  --bs-body-bg: var(--paper);
+  --bs-link-color: var(--forest);
+  --bs-link-hover-color: #436d3e;
+}
+
+/* Border-box makes widths predictable; smooth scrolling is switched off below for reduced motion. */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  margin: 0;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-underline-offset: .22em;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: var(--lime);
+  color: var(--forest-deep);
+}
+
+/* A visible focus ring helps people move around without a mouse. */
+:focus-visible {
+  outline: 3px solid #739943;
+  outline-offset: 5px;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: -6rem;
+  z-index: 1100;
+  background: var(--lime);
+  padding: .65rem 1rem;
+  color: var(--forest);
+  border-radius: .3rem;
+}
+
+.skip-link:focus {
+  top: .75rem;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.section-space {
+  padding-block: 6rem;
+}
+
+.eyebrow {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 1.1rem;
+}
+
+.section-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: clamp(2.3rem, 4vw, 3.6rem);
+  line-height: 1.12;
+  letter-spacing: -.045em;
+}
+
+.text-soft {
+  color: var(--muted);
+}
+
+.text-link {
+  font-size: .86rem;
+  font-weight: 650;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .7rem;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform .2s ease;
+}
+
+a:hover .arrow {
+  transform: translate(3px, -2px);
+}
+
+/* Bootstrap handles the mobile menu; these rules only change its appearance. */
+.site-header {
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.navbar {
+  min-height: 90px;
+  --bs-navbar-color: var(--forest);
+  --bs-navbar-hover-color: #588143;
+}
+
+.navbar-brand {
+  font-size: 1.42rem;
+  color: var(--forest);
+  font-weight: 750;
+  letter-spacing: -.055em;
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+}
+
+.brand-icon {
+  width: 30px;
+  height: 34px;
+}
+
+.nav-link {
+  font-size: .84rem;
+  padding: .7rem 0 !important;
+  margin-inline: 1.15rem;
+  border-bottom: 1px solid transparent;
+}
+
+.nav-link[aria-current="page"] {
+  border-color: var(--forest);
+  font-weight: 650;
+}
+
+.navbar-toggler {
+  padding: .45rem;
+  border-color: #bbcbb8;
+}
+
+.nav-join {
+  margin-left: 1.4rem;
+}
+
+/* Buttons use a custom Bootstrap colour palette with clear hover and disabled states. */
+.btn {
+  border-radius: 5px;
+  padding: .85rem 1.4rem;
+  font-size: .85rem;
+  font-weight: 650;
+  transition: background-color .2s ease, color .2s ease, transform .2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-forest {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--forest);
+  --bs-btn-border-color: var(--forest);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #28553e;
+  --bs-btn-hover-border-color: #28553e;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--forest-deep);
+  --bs-btn-active-border-color: var(--forest-deep);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #64796b;
+  --bs-btn-disabled-border-color: #64796b;
+}
+
+.btn-lime {
+  --bs-btn-color: var(--forest);
+  --bs-btn-bg: var(--lime);
+  --bs-btn-border-color: var(--lime);
+  --bs-btn-hover-color: var(--forest);
+  --bs-btn-hover-bg: #e6f5bb;
+  --bs-btn-hover-border-color: #e6f5bb;
+}
+
+.btn-outline-forest {
+  --bs-btn-color: var(--forest);
+  --bs-btn-border-color: #a4b39d;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--forest);
+  --bs-btn-hover-border-color: var(--forest);
+}
+
+/* The large photograph and dark overlay keep the hero expressive and its text readable. */
+.hero {
+  position: relative;
+  background: var(--forest-deep);
+  color: #fff;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(9, 31, 21, .86), rgba(9, 31, 21, .5) 55%, rgba(9, 31, 21, .17));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding-block: 5rem;
+}
+
+.hero .eyebrow {
+  color: var(--lime);
+}
+
+.hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: clamp(3.4rem, 6.5vw, 6rem);
+  line-height: 1.02;
+  letter-spacing: -.055em;
+  max-width: 770px;
+  margin-bottom: 1.6rem;
+}
+
+.hero h1 em {
+  font-weight: 400;
+  color: var(--lime);
+}
+
+.hero-description {
+  color: #e3e9df;
+  max-width: 435px;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero-secondary {
+  color: #fff;
+  text-decoration: none;
+  padding: .85rem .35rem;
+  font-size: .85rem;
+}
+
+.hero-secondary:hover {
+  color: var(--lime);
+}
+
+.hero-note {
+  position: absolute;
+  bottom: 1.5rem;
+  right: max(1.5rem, calc((100vw - 1176px) / 2));
+  z-index: 1;
+  font-size: .65rem;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  color: #e0e8d9;
+}
+
+/* This strip introduces our three focus areas without inventing impact statistics. */
+.focus-strip {
+  background: var(--lime);
+}
+
+.focus-item {
+  padding: 1.4rem 1rem;
+  display: flex;
+  gap: .85rem;
+  align-items: center;
+  justify-content: center;
+  font-size: .82rem;
+  font-weight: 600;
+}
+
+.focus-item span {
+  font-family: Georgia, serif;
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.focus-item+.focus-item {
+  border-left: 1px solid #b6cf8b;
+}
+
+/* Photography gets its own space, with a small editorial label instead of a decorative card. */
+.story-photo {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  border-radius: 4px 70px 4px 4px;
+}
+
+.photo-caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--muted);
+  font-size: .7rem;
+  margin-top: .75rem;
+}
+
+.principle {
+  padding-block: 1rem;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  gap: 1.3rem;
+  align-items: start;
+}
+
+.principle-number {
+  color: #6b8153;
+  font-size: .75rem;
+  padding-top: .2rem;
+}
+
+.principle h3 {
+  font-size: .95rem;
+  margin-bottom: .3rem;
+}
+
+.principle p {
+  font-size: .85rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Activity cards remain real links and readable content even when JavaScript is unavailable. */
+.activities-section {
+  background: #edf0e6;
+}
+
+.activity-card {
+  --bs-card-bg: var(--paper);
+  --bs-card-border-width: 0;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 100%;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px #173b2c12;
+}
+
+.activity-image {
+  width: 100%;
+  height: 225px;
+  object-fit: cover;
+}
+
+.activity-card .card-body {
+  padding: 1.7rem;
+}
+
+.activity-category {
+  font-size: .65rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: #557247;
+  font-weight: 700;
+}
+
+.activity-card h3 {
+  font-family: Georgia, serif;
+  font-size: 1.6rem;
+  letter-spacing: -.035em;
+  margin-block: .65rem;
+}
+
+.activity-card p {
+  font-size: .85rem;
+  color: var(--muted);
+}
+
+.activity-meta {
+  font-size: .72rem;
+  color: var(--muted);
+  padding-block: .9rem;
+  border-top: 1px solid var(--line);
+  margin-top: 1.4rem;
+}
+
+.demo-label {
+  font-size: .72rem;
+  color: var(--muted);
+}
+
+/* The final invitation gives visitors a clear next step. */
+.invitation {
+  background: var(--forest);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.invitation .eyebrow {
+  color: var(--lime);
+}
+
+.invitation p {
+  color: #cfdbce;
+  max-width: 430px;
+}
+
+.invitation .section-title {
+  max-width: 630px;
+}
+
+.invitation-art {
+  width: 180px;
+  opacity: .65;
+  transform: rotate(-15deg);
+}
+
+/* Footer links include outside resources and an honest demo disclosure. */
+.site-footer {
+  padding: 3.5rem 0 1.5rem;
+}
+
+.footer-copy {
+  max-width: 270px;
+  font-size: .8rem;
+  color: var(--muted);
+  margin-top: 1rem;
+}
+
+.footer-heading {
+  font-size: .7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: .5rem;
+}
+
+.footer-links a {
+  font-size: .8rem;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--line);
+  margin-top: 2.5rem;
+  padding-top: 1.3rem;
+  color: var(--muted);
+  font-size: .7rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Inner pages share this quieter heading style. */
+.page-intro {
+  padding-block: 4rem 3rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.page-intro h1 {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(2.8rem, 6vw, 4.7rem);
+  line-height: 1.07;
+  letter-spacing: -.05em;
+}
+
+.page-intro p {
+  max-width: 540px;
+  color: var(--muted);
+}
+
+.breadcrumb {
+  font-size: .75rem;
+  margin-bottom: 2.3rem;
+  --bs-breadcrumb-divider-color: #7e8c7b;
+}
+
+.breadcrumb a {
+  color: var(--muted);
+}
+
+.resource-box {
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 2rem;
+}
+
+.resource-box h2 {
+  font-family: Georgia, serif;
+  font-size: 1.8rem;
+}
+
+.resource-box p {
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+/* This short entrance effect does not hide content if JavaScript fails. */
+@keyframes arrive {
+  from {
+    opacity: .3;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content {
+  animation: arrive .8s ease-out both;
+}
+
+/* Compact screens stack content and make navigation easier to tap. */
+@media (max-width: 991.98px) {
+  .navbar {
+    min-height: 76px;
+  }
+
+  .navbar-collapse {
+    padding-block: .75rem 1rem;
+  }
+
+  .nav-link {
+    margin: 0;
+    width: fit-content;
+  }
+
+  .nav-join {
+    margin: .75rem 0 0;
+  }
+
+  .hero {
+    min-height: 610px;
+  }
+
+  .section-space {
+    padding-block: 4rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .container {
+    padding-inline: 1.35rem;
+  }
+
+  .hero {
+    min-height: 610px;
+  }
+
+  .hero-content {
+    padding-block: 3.5rem 5rem;
+  }
+
+  .hero h1 {
+    font-size: 3.55rem;
+  }
+
+  .hero-note {
+    left: 1.35rem;
+    right: auto;
+  }
+
+  .focus-item {
+    font-size: .64rem;
+    padding: 1rem .35rem;
+    gap: .35rem;
+  }
+
+  .focus-item span {
+    font-size: 1rem;
+  }
+
+  .story-photo {
+    height: 340px;
+  }
+
+  .section-space {
+    padding-block: 3.5rem;
+  }
+
+  .page-intro {
+    padding-block: 2rem;
+  }
+}
+
+/* Motion preferences apply to Bootstrap transitions and our own effects. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

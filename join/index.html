@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Shared styles load first; the local stylesheet handles the joining form. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Take your first step with GreenSteps. Try our local demonstration membership form and explore your environmental interests.">
+  <meta name="theme-color" content="#173b2c">
+  <title>Join the Club — GreenSteps</title>
+  <link rel="icon" href="../assets/images/leaf.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="../assets/vendor/bootstrap.bundle.min.js" defer></script>
+  <script src="../script.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg container" aria-label="Main navigation">
+      <a class="navbar-brand" href="../index.html"><img class="brand-icon" src="../assets/images/leaf.svg" alt=""
+          width="30" height="34">greensteps.</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation"
+        aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="main-navigation">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../activities/index.html">Our activities</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#our-purpose">Our purpose</a></li>
+          <li class="nav-item"><a class="btn btn-forest nav-join" href="index.html" aria-current="page">Join the club
+              <span class="ms-2" aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main id="main-content">
+    <section class="page-intro">
+      <div class="container">
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Join the club</li>
+          </ol>
+        </nav>
+        <span class="eyebrow">A greener tomorrow starts with you</span>
+        <h1>Your first step<br>belongs here.</h1>
+        <p class="mt-4 mb-0">Bring your ideas, your questions, and your willingness to try. There is no perfect starting
+          point. Just yours.</p>
+      </div>
+    </section>
+    <section class="join-section">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <!-- This welcoming panel explains participation without promising real events. -->
+          <div class="col-lg-5">
+            <aside class="join-aside" aria-labelledby="welcome-title">
+              <img src="../assets/images/forest.jpg" alt="A peaceful forest canopy lit by sunlight" width="1920"
+                height="1280">
+              <div class="join-aside-content"><span class="eyebrow">Different people. Shared purpose.</span>
+                <h2 id="welcome-title">You don't have to<br>do it all alone.</h2>
+                <p class="mt-3">Imagine a club where you can learn something new, meet thoughtful people, and make room
+                  for nature in your everyday life.</p>
+                <ul>
+                  <li>Explore activities that suit your interests</li>
+                  <li>Learn practical environmental habits</li>
+                  <li>Share your ideas and keep growing</li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+          <div class="col-lg-7">
+            <div class="form-panel">
+              <h2 id="form-title">Let's get to know you.</h2>
+              <p class="text-soft small">Fields marked with * are required.</p>
+              <p class="demo-note" id="demo-notice"><strong>This is a local demonstration.</strong> Your details stay on
+                this page. Nothing is sent, stored, or registered with a real club. You can use made-up details to try
+                it.</p>
+              <noscript>
+                <p class="demo-note">Please enable JavaScript to try the form. Submission is disabled while JavaScript
+                  is unavailable.</p>
+              </noscript>
+              <!-- Native HTML constraints still work with the extra checks in script.js. -->
+              <form id="join-form" aria-labelledby="form-title" aria-describedby="demo-notice">
+                <div class="row g-3">
+                  <div class="col-sm-6"><label class="form-label" for="full-name">Your name *</label><input
+                      class="form-control" id="full-name" name="fullName" type="text" autocomplete="name" minlength="2"
+                      maxlength="80" placeholder="Alex Chan" required aria-describedby="full-name-error">
+                    <div class="field-error" id="full-name-error"></div>
+                  </div>
+                  <div class="col-sm-6"><label class="form-label" for="email">Email address *</label><input
+                      class="form-control" id="email" name="email" type="email" autocomplete="email" maxlength="254"
+                      placeholder="alex@example.com" required aria-describedby="email-error">
+                    <div class="field-error" id="email-error"></div>
+                  </div>
+                  <div class="col-12"><label class="form-label" for="activity">What sparks your interest?
+                      *</label><select class="form-select" id="activity" name="activity" required
+                      aria-describedby="activity-error">
+                      <option value="">Choose an activity</option>
+                      <option value="cleanup">A cleaner coastline</option>
+                      <option value="planting">Room to grow</option>
+                      <option value="workshop">Waste less. Live more.</option>
+                      <option value="exploring">I'm still exploring</option>
+                    </select>
+                    <div class="field-error" id="activity-error"></div>
+                  </div>
+                  <div class="col-12"><label class="form-label" for="message">Anything you'd like to share? <span
+                        class="optional-label">(optional)</span></label><textarea class="form-control" id="message"
+                      name="message" rows="4" maxlength="500"
+                      placeholder="An idea, an interest, or a question. We'd love to hear it."
+                      aria-describedby="message-hint message-count message-error"></textarea>
+                    <div class="form-text" id="message-hint">Please avoid including sensitive personal information.
+                    </div>
+                    <div class="form-text character-count" id="message-count">0 / 500 characters</div>
+                    <div class="field-error" id="message-error"></div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check"><input class="form-check-input" id="acknowledgement" name="acknowledgement"
+                        type="checkbox" required aria-describedby="acknowledgement-error"><label
+                        class="form-check-label" for="acknowledgement">I understand that this form is a demonstration
+                        and does not create a real membership. *</label></div>
+                    <div class="field-error" id="acknowledgement-error"></div>
+                  </div>
+                  <!-- Start disabled to avoid accidental submission if JavaScript does not load. -->
+                  <div class="col-12 d-flex flex-wrap gap-2 mt-4"><button class="btn btn-forest flex-grow-1"
+                      id="submit-application" type="submit" disabled>Take my first step <span class="ms-2"
+                        aria-hidden="true">↗</span></button><button class="btn btn-outline-forest"
+                      type="reset">Reset</button></div>
+                </div>
+              </form>
+              <!-- This output region is separate from the form so repeated submissions stay simple. -->
+              <section class="confirmation" id="confirmation" tabindex="-1" role="status" aria-live="polite"
+                aria-atomic="true" aria-labelledby="result-name" hidden>
+                <h3 id="result-name"></h3>
+                <p>Your demo form has been checked successfully. Here is your summary:</p>
+                <dl>
+                  <dt>Email</dt>
+                  <dd id="result-email"></dd>
+                  <dt>Your interest</dt>
+                  <dd id="result-activity"></dd>
+                  <dt>Your message</dt>
+                  <dd id="result-message"></dd>
+                </dl>
+                <p class="mb-0">Nothing was sent or saved. Use Reset to clear your details, or explore <a
+                    href="../activities/index.html">our sample activities</a>.</p>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6"><a class="navbar-brand" href="../index.html"><img class="brand-icon"
+              src="../assets/images/leaf.svg" alt="" width="30" height="34">greensteps.</a>
+          <p class="footer-copy">Small actions. Shared purpose.<br>A student community for a greener tomorrow.</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h2 class="footer-heading">Find your way</h2>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../activities/index.html">Our activities</a></li>
+            <li><a href="index.html">Join the club</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h2 class="footer-heading">Keep exploring</h2>
+          <ul class="footer-links">
+            <li><a href="https://www.unep.org/" target="_blank" rel="noopener noreferrer">UN Environment Programme ↗
+                <span class="visually-hidden">(opens in a new tab)</span></a></li>
+            <li><a href="https://www.worldwildlife.org/" target="_blank" rel="noopener noreferrer">World Wildlife Fund ↗
+                <span class="visually-hidden">(opens in a new tab)</span></a></li>
+            <li><a href="../CREDITS.md">Image &amp; library credits</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 GreenSteps · A fictional club for an educational project.</span><span>Made
+          with care for our shared home.</span></div>
+    </div>
+  </footer>
+</body>
+
+</html>

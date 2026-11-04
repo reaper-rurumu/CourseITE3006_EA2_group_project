@@ -1,0 +1,180 @@
+/* The form is a quiet, readable surface beside a visual welcome panel. */
+.join-section {
+    padding-block: 4rem 5rem;
+}
+
+.join-aside {
+    background: var(--forest);
+    color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.join-aside img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.join-aside-content {
+    padding: 2rem;
+}
+
+.join-aside h2 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-size: 2.3rem;
+    line-height: 1.12;
+    letter-spacing: -.04em;
+}
+
+.join-aside p,
+.join-aside li {
+    font-size: .85rem;
+    color: #d4dfcf;
+}
+
+.join-aside ul {
+    padding-left: 1.15rem;
+    margin-bottom: 0;
+}
+
+.join-aside li {
+    padding-bottom: .7rem;
+}
+
+.join-aside .eyebrow {
+    color: var(--lime);
+}
+
+.form-panel {
+    border: 1px solid var(--line);
+    background: #fffef9;
+    border-radius: 5px;
+    padding: 2.3rem;
+}
+
+.form-panel h2 {
+    font-family: Georgia, serif;
+    font-size: 2rem;
+    letter-spacing: -.04em;
+}
+
+/* Bootstrap controls inherit our palette; errors also use text so colour is not the only signal. */
+.form-label {
+    font-size: .83rem;
+    font-weight: 650;
+    margin-bottom: .4rem;
+}
+
+.form-control,
+.form-select {
+    background-color: #fffef9;
+    border-color: #c5cdbf;
+    border-radius: 4px;
+    padding: .78rem .9rem;
+    font-size: .9rem;
+}
+
+.form-select {
+    padding-right: 2.5rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #658946;
+    box-shadow: 0 0 0 .2rem #8ba96526;
+}
+
+.form-control[aria-invalid="true"],
+.form-select[aria-invalid="true"] {
+    border-color: #9d332e;
+}
+
+.form-text {
+    font-size: .75rem;
+    color: var(--muted);
+}
+
+.field-error {
+    color: #9d332e;
+    font-size: .78rem;
+    margin-top: .35rem;
+}
+
+.form-check-input:checked {
+    background-color: var(--forest);
+    border-color: var(--forest);
+}
+
+.form-check-input:focus {
+    border-color: #658946;
+    box-shadow: 0 0 0 .2rem #8ba96526;
+}
+
+.form-check-label {
+    font-size: .8rem;
+}
+
+.demo-note {
+    background: #edf0e6;
+    border-left: 3px solid #a6bf78;
+    padding: .9rem 1rem;
+    font-size: .77rem;
+    color: var(--forest);
+}
+
+.optional-label {
+    font-weight: 400;
+    color: var(--muted);
+}
+
+.character-count {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+/* The confirmation remains on the page and can be read again after submission. */
+.confirmation {
+    background: #e9f1dd;
+    border: 1px solid #b5cb99;
+    border-radius: 4px;
+    padding: 1.2rem;
+    margin-top: 1.5rem;
+    overflow-wrap: anywhere;
+}
+
+.confirmation h3 {
+    font-size: 1.1rem;
+    font-weight: 650;
+}
+
+.confirmation p {
+    font-size: .85rem;
+    margin-bottom: .4rem;
+}
+
+.confirmation dl {
+    margin-block: 1rem;
+    font-size: .85rem;
+}
+
+.confirmation dt {
+    font-weight: 650;
+}
+
+.confirmation dd {
+    margin-bottom: .6rem;
+    white-space: pre-wrap;
+}
+
+@media (max-width: 575.98px) {
+    .form-panel {
+        padding: 1.4rem;
+    }
+
+    .join-section {
+        padding-block: 2.5rem;
+    }
+}
