@@ -23,11 +23,11 @@
         toggle.click();
         // Put keyboard focus back on the button, so the user knows where they are.
         toggle.focus();
-      // Finish this function or conditional block.
+        // Finish this function or conditional block.
       }
-    // Finish this callback and attach it to the method above.
+      // Finish this callback and attach it to the method above.
     });
-  // Finish this function or conditional block.
+    // Finish this function or conditional block.
   }
 
   // Set up the category filters only when the Activities page is open.
@@ -52,7 +52,7 @@
     function isCategory(value) {
       // Return true when at least one known category matches the value.
       return categories.some(function (category) { return category === value; });
-    // Finish this function or conditional block.
+      // Finish this function or conditional block.
     }
 
     // Show matching cards and update the controls without rebuilding the page.
@@ -70,7 +70,7 @@
         activity.hidden = !matches;
         // Only visible cards contribute to the result count.
         if (matches) visibleCount += 1;
-      // Finish this callback and attach it to the method above.
+        // Finish this callback and attach it to the method above.
       });
 
       // Tell assistive tools which filter is selected, as well as changing its CSS appearance.
@@ -79,11 +79,11 @@
         if (!(control instanceof HTMLButtonElement)) return;
         // Mark this filter as selected only when its category matches the active one.
         control.setAttribute("aria-pressed", String(control.dataset.filter === category));
-      // Finish this callback and attach it to the method above.
+        // Finish this callback and attach it to the method above.
       });
       // Use the actual card total so this message stays correct if another card is added.
       status.textContent = "Showing " + visibleCount + " of " + activities.length + " activities.";
-    // Finish this function expression or object value.
+      // Finish this function expression or object value.
     };
 
     // Give each real filter button its own click handler.
@@ -96,13 +96,13 @@
         const category = control.dataset.filter;
         // Only run the filter when the selected category is on the allowed list.
         if (isCategory(category)) filterActivities(category);
-      // Finish this callback and attach it to the method above.
+        // Finish this callback and attach it to the method above.
       });
       // Enable a button only after its working click handler has been attached.
       control.disabled = false;
-    // Finish this callback and attach it to the method above.
+      // Finish this callback and attach it to the method above.
     });
-  // Finish this function or conditional block.
+    // Finish this function or conditional block.
   }
 
   // Set up validation and confirmation only when the Join page is open.
@@ -120,7 +120,7 @@
       workshop: "Waste less. Live more.",
       // Provide a choice for visitors who have not picked an activity yet.
       exploring: "I'm still exploring"
-    // Finish this function expression or object value.
+      // Finish this function expression or object value.
     };
 
     // Find the form first, so other pages can leave this function straight away.
@@ -156,23 +156,23 @@
 
     // Stop if the HTML is incomplete. Runtime checks also give the type checker safe element types.
     if (!(nameInput instanceof HTMLInputElement) || !(emailInput instanceof HTMLInputElement) ||
-        // Also check these element types before continuing with the form setup.
-        !(activityInput instanceof HTMLSelectElement) || !(messageInput instanceof HTMLTextAreaElement) ||
-        // Also check these element types before continuing with the form setup.
-        !(acknowledgement instanceof HTMLInputElement) || !(submitButton instanceof HTMLButtonElement) ||
-        // Also check these element types before continuing with the form setup.
-        !(confirmation instanceof HTMLElement) || !(messageCount instanceof HTMLElement) ||
-        // Also check these element types before continuing with the form setup.
-        !(resultName instanceof HTMLElement) || !(resultEmail instanceof HTMLElement) ||
-        // Also check these element types before continuing with the form setup.
-        !(resultActivity instanceof HTMLElement) || !(resultMessage instanceof HTMLElement)) return;
+      // Also check these element types before continuing with the form setup.
+      !(activityInput instanceof HTMLSelectElement) || !(messageInput instanceof HTMLTextAreaElement) ||
+      // Also check these element types before continuing with the form setup.
+      !(acknowledgement instanceof HTMLInputElement) || !(submitButton instanceof HTMLButtonElement) ||
+      // Also check these element types before continuing with the form setup.
+      !(confirmation instanceof HTMLElement) || !(messageCount instanceof HTMLElement) ||
+      // Also check these element types before continuing with the form setup.
+      !(resultName instanceof HTMLElement) || !(resultEmail instanceof HTMLElement) ||
+      // Also check these element types before continuing with the form setup.
+      !(resultActivity instanceof HTMLElement) || !(resultMessage instanceof HTMLElement)) return;
 
     // Only accept IDs that belong to our own list, including values passed through page links.
     /** @param {string} value @returns {value is ActivityId} */
     function isActivityId(value) {
       // hasOwnProperty avoids accidentally accepting built-in names such as __proto__.
       return Object.prototype.hasOwnProperty.call(activityNames, value);
-    // Finish this function or conditional block.
+      // Finish this function or conditional block.
     }
 
     // Read an optional activity from a link such as join/index.html?activity=planting.
@@ -181,7 +181,7 @@
     if (requestedActivity !== null && isActivityId(requestedActivity)) {
       // Ignore unknown values and preselect only one of our real activities.
       activityInput.value = requestedActivity;
-    // Finish this function or conditional block.
+      // Finish this function or conditional block.
     }
 
     // Group the fields so shared validation and reset work can use the same small loop.
@@ -204,31 +204,31 @@
       if (nameLength < 2 || nameLength > 80) {
         // Explain the name-length rule in the field's validation feedback.
         nameInput.setCustomValidity("Please enter a name between 2 and 80 characters, excluding spaces at the ends.");
-      // Finish this function or conditional block.
+        // Finish this function or conditional block.
       }
       // Check limits in JavaScript too, because a value can be changed outside normal typing.
       if (emailInput.value.length > 254) {
         // Explain the email-length rule in the field's validation feedback.
         emailInput.setCustomValidity("Please use an email address of 254 characters or fewer.");
-      // Finish this function or conditional block.
+        // Finish this function or conditional block.
       }
       // A required selection must also be one of the choices our code understands.
       if (!isActivityId(activityInput.value)) {
         // Ask the visitor to choose one of the activities the code recognizes.
         activityInput.setCustomValidity("Please choose one of the listed activities.");
-      // Finish this function or conditional block.
+        // Finish this function or conditional block.
       }
       // The optional message may be empty, but it cannot exceed the stated limit.
       if (messageInput.value.length > 500) {
         // Explain that the optional message is longer than the limit.
         messageInput.setCustomValidity("Please keep your message within 500 characters.");
-      // Finish this function or conditional block.
+        // Finish this function or conditional block.
       }
       // The acknowledgement makes it clear that this demonstration does not register a member.
       if (!acknowledgement.checked) {
         // Explain why the demonstration acknowledgement must be checked.
         acknowledgement.setCustomValidity("Please acknowledge that this form is a local demonstration.");
-      // Finish this function or conditional block.
+        // Finish this function or conditional block.
       }
 
       // Give each field a readable error message and an accessible valid/invalid state.
@@ -239,11 +239,11 @@
         field.setAttribute("aria-invalid", String(!field.validity.valid));
         // textContent safely shows the browser's message as plain text.
         if (error instanceof HTMLElement) error.textContent = field.validationMessage;
-      // Finish this callback and attach it to the method above.
+        // Finish this callback and attach it to the method above.
       });
       // Required fields and email formatting are still checked by the browser.
       return form.checkValidity();
-    // Finish this function expression or object value.
+      // Finish this function expression or object value.
     };
 
     // Show one checked application without interpreting any input as HTML.
@@ -261,7 +261,7 @@
       confirmation.hidden = false;
       // Move keyboard focus to the new confirmation so it is easy to find.
       confirmation.focus();
-    // Finish this function expression or object value.
+      // Finish this function expression or object value.
     };
 
     // Clear a field's old feedback as soon as the user starts changing it.
@@ -278,16 +278,16 @@
         if (error instanceof HTMLElement) error.textContent = "";
         // A previous summary should not look current after its inputs have changed.
         confirmation.hidden = true;
-      // Finish this callback and attach it to the method above.
+        // Finish this callback and attach it to the method above.
       });
-    // Finish this callback and attach it to the method above.
+      // Finish this callback and attach it to the method above.
     });
 
     // Keep the visible message length in sync with what the user has typed.
     messageInput.addEventListener("input", function () {
       // Display the current message length beside the 500-character limit.
       messageCount.textContent = messageInput.value.length + " / 500 characters";
-    // Finish this callback and attach it to the method above.
+      // Finish this callback and attach it to the method above.
     });
 
     // Process submission locally; this project has no server or real membership registration.
@@ -307,7 +307,7 @@
         form.reportValidity();
         // Stop this function here so invalid data is not processed.
         return;
-      // Finish this function or conditional block.
+        // Finish this function or conditional block.
       }
 
       // Recheck the activity type before building the typed confirmation data.
@@ -324,9 +324,9 @@
         activity: selectedActivity,
         // Trim an optional message so a few spaces are treated as an empty message.
         message: messageInput.value.trim()
-      // Finish this callback and attach it to the method above.
+        // Finish this callback and attach it to the method above.
       });
-    // Finish this callback and attach it to the method above.
+      // Finish this callback and attach it to the method above.
     });
 
     // Let the browser reset input values while we clear our extra messages and output.
@@ -341,7 +341,7 @@
         const error = document.getElementById(field.id + "-error");
         // Only update the error output when that HTML element exists.
         if (error instanceof HTMLElement) error.textContent = "";
-      // Finish this callback and attach it to the method above.
+        // Finish this callback and attach it to the method above.
       });
       // Hide and clear the old summary, including any personal details it displayed.
       confirmation.hidden = true;
@@ -349,18 +349,18 @@
       [resultName, resultEmail, resultActivity, resultMessage].forEach(function (output) {
         // Remove the old personal detail from this output element.
         output.textContent = "";
-      // Finish this callback and attach it to the method above.
+        // Finish this callback and attach it to the method above.
       });
       // The browser resets the textarea, so its counter should return to zero too.
       messageCount.textContent = "0 / 500 characters";
-    // Finish this callback and attach it to the method above.
+      // Finish this callback and attach it to the method above.
     });
 
     // Use our submit handler first, then call native validation explicitly when needed.
     form.noValidate = true;
     // The HTML starts with submission disabled; enable it only after setup succeeds.
     submitButton.disabled = false;
-  // Finish this function or conditional block.
+    // Finish this function or conditional block.
   }
 
   // Each setup function runs independently, so a missing form never stops the other features.
@@ -369,5 +369,5 @@
   setupActivityFilters();
   // Start form handling when the matching Join page elements are present.
   setupJoinForm();
-// Run the private wrapper once after defining the setup functions.
+  // Run the private wrapper once after defining the setup functions.
 })();
