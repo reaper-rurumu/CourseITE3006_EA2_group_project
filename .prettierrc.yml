@@ -1,0 +1,18 @@
+# Aim for readable lines of about 100 characters; Prettier may wrap longer code.
+printWidth: 100
+# Use two spaces for each indentation level.
+tabWidth: 2
+# Indent with spaces instead of tab characters.
+useTabs: false
+# Keep semicolons at the end of JavaScript statements.
+semi: true
+# Prefer double quotes, matching the existing JavaScript style.
+singleQuote: false
+# Add trailing commas only where older JavaScript versions also support them.
+trailingComma: es5
+# Use the same line-ending style across different computers.
+endOfLine: lf
+# Respect HTML whitespace rules so formatting does not casually change inline spacing.
+htmlWhitespaceSensitivity: css
+# Keep Markdown paragraphs from being automatically wrapped into new lines.
+proseWrap: preserve

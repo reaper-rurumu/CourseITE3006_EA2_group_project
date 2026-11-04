@@ -1,0 +1,80 @@
+// These settings apply only when this project folder is open in VS Code.
+{
+  // Require our project configuration before formatting a file.
+  "prettier.requireConfig": true,
+  // Respect the files and folders listed in the project's ignore file.
+  "prettier.ignorePath": ".prettierignore",
+  // Choose the formatter for HTML files.
+  "[html]": {
+    // Use the already installed Prettier extension.
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // Wait for a manual formatting command instead of changing files on save.
+    "editor.formatOnSave": false,
+    // Keep pasted code unchanged until you choose to format it.
+    "editor.formatOnPaste": false,
+    // Do not reformat automatically while you type.
+    "editor.formatOnType": false
+    // Finish the HTML editor settings.
+  },
+  // Choose the formatter for CSS files.
+  "[css]": {
+    // Use Prettier for stylesheet formatting.
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // Let you decide when to format a stylesheet.
+    "editor.formatOnSave": false,
+    // Leave pasted CSS unchanged until a manual command.
+    "editor.formatOnPaste": false,
+    // Leave newly typed CSS unchanged until a manual command.
+    "editor.formatOnType": false
+    // Finish the CSS editor settings.
+  },
+  // Choose the formatter for our shared JavaScript file.
+  "[javascript]": {
+    // Use Prettier for JavaScript formatting.
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // Keep saving separate from your manual formatting command.
+    "editor.formatOnSave": false,
+    // Do not reformat a pasted JavaScript snippet automatically.
+    "editor.formatOnPaste": false,
+    // Do not reformat JavaScript automatically while you type.
+    "editor.formatOnType": false
+    // Finish the JavaScript editor settings.
+  },
+  // Choose the formatter for strict JSON files such as package.json.
+  "[json]": {
+    // Use Prettier while keeping the file valid JSON.
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // Format JSON only when you request it.
+    "editor.formatOnSave": false,
+    // Do not reformat pasted JSON automatically.
+    "editor.formatOnPaste": false,
+    // Do not reformat JSON automatically while you type.
+    "editor.formatOnType": false
+    // Finish the JSON editor settings.
+  },
+  // Choose the formatter for JSON files that support comments.
+  "[jsonc]": {
+    // Use Prettier without removing the explanatory comments.
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // Keep formatting a manual action.
+    "editor.formatOnSave": false,
+    // Keep pasted configuration unchanged until you choose to format it.
+    "editor.formatOnPaste": false,
+    // Do not reformat settings automatically while you type.
+    "editor.formatOnType": false
+    // Finish the commented-JSON editor settings.
+  },
+  // Choose the formatter for project documentation.
+  "[markdown]": {
+    // Use Prettier for Markdown layout.
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // Let you decide when to format the documentation.
+    "editor.formatOnSave": false,
+    // Leave pasted documentation alone until a manual command.
+    "editor.formatOnPaste": false,
+    // Do not reformat documentation automatically while you type.
+    "editor.formatOnType": false
+    // Finish the Markdown editor settings.
+  }
+  // Finish the project-specific VS Code settings.
+}

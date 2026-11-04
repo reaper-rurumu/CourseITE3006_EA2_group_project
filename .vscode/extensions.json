@@ -1,0 +1,10 @@
+// Recommend the same formatter if this project is opened on another computer.
+{
+  // List the VS Code extensions recommended for this project.
+  "recommendations": [
+    // Prettier is already installed on this computer.
+    "esbenp.prettier-vscode"
+    // Finish the recommended-extension list.
+  ]
+  // Finish this project's extension recommendations.
+}

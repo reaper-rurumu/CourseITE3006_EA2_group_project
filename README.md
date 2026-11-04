@@ -54,6 +54,23 @@ The checker validates JavaScript using JSDoc types, strict null checks, DOM type
 
 ## Editing the site
 
+### Format the code yourself with Prettier
+
+The Prettier VS Code extension is already installed on this computer. The project uses its bundled formatter, so npm is not needed for editor formatting. Open **CourseITE3006_EA2_group_project** as a folder in VS Code so its `.vscode/settings.json` settings take effect.
+
+1. Open the HTML, CSS, JavaScript, JSON, or Markdown file you want to tidy.
+2. Press **Shift + Alt + F** on Windows to run **Format Document**.
+3. To choose explicitly, press **Ctrl + Shift + P**, run **Format Document With...**, and select **Prettier - Code formatter**.
+4. Review the result, then save the file. You can undo the formatting with **Ctrl + Z**.
+
+Automatic formatting on save, paste, and typing is turned off for these file types. `.prettierrc.yml` sets two-space indentation, double quotes, semicolons, and a preferred line width of 100 characters. Each option has an English explanation. `.prettierignore` protects Bootstrap, images, the packaged ZIP, and the existing scratch file.
+
+Prettier keeps existing comments but may wrap a long statement or tag across several lines. It does not generate a new explanation for each wrapped line. The website source has not been reformatted as part of this setup.
+
+This editor setup does not add Prettier to `package.json` or install a new Node runtime. The existing optional npm type-check commands still require Node and npm as described above.
+
+### Change the website content
+
 Change shared colours in the `:root` block of the root stylesheet. Edit each page's content in its own HTML file. If you add an activity, update its card, filter category, joining-form option, and the checked activity list in the root script. The filter result total is calculated from the actual number of activity cards.
 
 The footer links to independent environmental organizations for further reading; no affiliation is claimed. See CREDITS.md for image sources and Bootstrap's licence.

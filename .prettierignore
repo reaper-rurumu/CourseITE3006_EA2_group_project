@@ -1,0 +1,14 @@
+# Leave Bootstrap and its licence in their original downloaded form.
+assets/vendor/
+# Keep photographs and original illustration assets out of formatting commands.
+assets/images/
+# Do not format installed packages if dependencies are added later.
+node_modules/
+# Leave Git's internal files alone.
+.git/
+# A ZIP archive is a packaged copy, rather than editable source code.
+*.zip
+# A screenshot is an image, rather than editable source code.
+GreenSteps-Preview.png
+# Keep the existing personal scratch file outside this website's formatting setup.
+a.txt
