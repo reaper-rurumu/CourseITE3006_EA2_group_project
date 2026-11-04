@@ -1,209 +1,744 @@
+<!-- Tell the browser to read this file as an HTML5 page. -->
 <!DOCTYPE html>
+<!-- Start the document and identify the main language as English. -->
 <html lang="en">
-
-<head>
-  <!-- These paths go up one folder to reuse the root styles, images, and scripts. -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-    content="Explore GreenSteps sample activities: coastal cleanups, planting sessions, and practical waste reduction workshops.">
-  <meta name="theme-color" content="#173b2c">
-  <title>Our Activities — GreenSteps</title>
-  <link rel="icon" href="../assets/images/leaf.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../assets/vendor/bootstrap.min.css">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="style.css">
-  <script src="../assets/vendor/bootstrap.bundle.min.js" defer></script>
-  <script src="../script.js" defer></script>
-  <script src="script.js" defer></script>
-</head>
-
-<body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
-  <!-- Bootstrap's Collapse plugin controls this accessible mobile menu. -->
-  <header class="site-header">
-    <nav class="navbar navbar-expand-lg container" aria-label="Main navigation">
-      <a class="navbar-brand" href="../index.html"><img class="brand-icon" src="../assets/images/leaf.svg" alt=""
-          width="30" height="34">greensteps.</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation"
-        aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation"><span
-          class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="main-navigation">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html" aria-current="page">Our activities</a></li>
-          <li class="nav-item"><a class="nav-link" href="../index.html#our-purpose">Our purpose</a></li>
-          <li class="nav-item"><a class="btn btn-forest nav-join" href="../join/index.html">Join the club <span
-                class="ms-2" aria-hidden="true">↗</span></a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <main id="main-content">
-    <section class="page-intro">
-      <div class="container">
-        <nav aria-label="Breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Our activities</li>
-          </ol>
-        </nav>
-        <span class="eyebrow">Find your kind of action</span>
-        <h1>A little time.<br>A world of possibility.</h1>
-        <p class="mt-4">Outdoors or around a table, there is a way for everyone to get involved. Choose something that
-          sparks your curiosity.</p>
-        <p class="demo-label mb-0">Educational demo: the following activities are sample ideas, not scheduled events or
-          confirmed bookings.</p>
-      </div>
-    </section>
-    <section class="section-space" aria-labelledby="activity-list-title">
-      <div class="container">
-        <h2 class="visually-hidden" id="activity-list-title">Explore our sample activities</h2>
-        <!-- Disabled buttons become available only after the filter script initializes. -->
-        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
-          <div class="filter-bar" role="group" aria-label="Filter activities by category">
-            <button class="filter-button" type="button" data-filter="all" aria-pressed="true" disabled>All
-              activities</button>
-            <button class="filter-button" type="button" data-filter="conservation" aria-pressed="false"
-              disabled>Conservation</button>
-            <button class="filter-button" type="button" data-filter="biodiversity" aria-pressed="false"
-              disabled>Biodiversity</button>
-            <button class="filter-button" type="button" data-filter="everyday" aria-pressed="false" disabled>Everyday
-              action</button>
-          </div>
-          <p class="results-count" id="filter-status" role="status" aria-live="polite" aria-atomic="true">Showing 3 of 3
-            activities.</p>
+  <!-- Group the page title, settings, and imported files. -->
+  <head>
+    <!-- Use UTF-8 so the page can display English, Chinese names, and symbols. -->
+    <meta charset="UTF-8">
+    <!-- Match the layout width to the device screen for responsive pages. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Describe this page for search engines and link previews. -->
+    <meta name="description" content="Explore GreenSteps sample activities: coastal cleanups, planting sessions, and practical waste reduction workshops.">
+    <!-- Suggest our dark green colour for browser interface elements. -->
+    <meta name="theme-color" content="#173b2c">
+    <!-- Set the name shown in the browser tab. -->
+    <title> Our Activities — GreenSteps </title>
+    <link rel="icon" href="../assets/images/leaf.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="../assets/vendor/bootstrap.bundle.min.js" defer></script>
+    <script src="../script.js" defer></script>
+  <!-- Finish the page settings. -->
+  </head>
+  <!-- Start the content that visitors can see and use. -->
+  <body>
+    <!-- Let keyboard users jump straight to the main page content. -->
+    <a class="skip-link" href="#main-content">
+      <!-- Show this text to the visitor. -->
+      Skip to content
+    <!-- Finish this a element. -->
+    </a>
+    <!-- Group the club logo and main navigation at the top of the page. -->
+    <header class="site-header">
+      <!-- Provide labelled navigation that screen readers can identify. -->
+      <nav class="navbar navbar-expand-lg container" aria-label="Main navigation">
+        <!-- Make the club logo a link back to the home page. -->
+        <a class="navbar-brand" href="../index.html">
+          <!-- Show a decorative logo without making screen readers repeat nearby text. -->
+          <img class="brand-icon" src="../assets/images/leaf.svg" alt="" width="30" height="34">
+          <!-- Show this text to the visitor. -->
+          greensteps.
+        <!-- Finish this a element. -->
+        </a>
+        <!-- Let Bootstrap toggle the mobile menu and expose whether it is open. -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- Style this small piece of text without creating a new section. -->
+          <span class="navbar-toggler-icon">
+          <!-- Finish this span element. -->
+          </span>
+        <!-- Finish this button element. -->
+        </button>
+        <!-- Give Bootstrap a target for opening and closing the mobile navigation. -->
+        <div class="collapse navbar-collapse" id="main-navigation">
+          <!-- Group related items in an unordered list. -->
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <!-- Keep this link or point as one item in its parent list. -->
+            <li class="nav-item">
+              <!-- Provide a real hyperlink so visitors can reach the linked page or section. -->
+              <a class="nav-link" href="../index.html">
+                <!-- Show this text to the visitor. -->
+                Home
+              <!-- Finish this a element. -->
+              </a>
+            <!-- Finish this list item. -->
+            </li>
+            <!-- Keep this link or point as one item in its parent list. -->
+            <li class="nav-item">
+              <!-- Mark this navigation link as the page currently being viewed. -->
+              <a class="nav-link" href="index.html" aria-current="page">
+                <!-- Show this text to the visitor. -->
+                Our activities
+              <!-- Finish this a element. -->
+              </a>
+            <!-- Finish this list item. -->
+            </li>
+            <!-- Keep this link or point as one item in its parent list. -->
+            <li class="nav-item">
+              <!-- Provide a real hyperlink so visitors can reach the linked page or section. -->
+              <a class="nav-link" href="../index.html#our-purpose">
+                <!-- Show this text to the visitor. -->
+                Our purpose
+              <!-- Finish this a element. -->
+              </a>
+            <!-- Finish this list item. -->
+            </li>
+            <!-- Keep this link or point as one item in its parent list. -->
+            <li class="nav-item">
+              <!-- Provide a real hyperlink so visitors can reach the linked page or section. -->
+              <a class="btn btn-forest nav-join" href="../join/index.html">
+                <!-- Show this text to the visitor. -->
+                Join the club
+                <!-- Show a decorative symbol without making a screen reader announce it. -->
+                <span class="ms-2" aria-hidden="true">
+                  <!-- Show this text to the visitor. -->
+                  ↗
+                <!-- Finish this span element. -->
+                </span>
+              <!-- Finish this a element. -->
+              </a>
+            <!-- Finish this list item. -->
+            </li>
+          <!-- Finish this list. -->
+          </ul>
+        <!-- Finish this layout group. -->
         </div>
-        <noscript>
-          <p>JavaScript is off, so all activities are shown and category filters are unavailable.</p>
-        </noscript>
-        <!-- Cards stay in the document when filtered, preserving their original content. -->
-        <div class="row g-4 activity-grid">
-          <div class="col-md-6 col-lg-4" data-activity data-category="conservation">
-            <article class="card activity-card" id="coastline">
-              <img class="activity-image" src="../assets/images/coast.jpg"
-                alt="A bright sandy coastline beside clear blue water" width="1000" height="667">
-              <div class="card-body d-flex flex-column"><span class="activity-category">Conservation · Outdoors</span>
-                <h3>A cleaner coastline</h3>
-                <p>Explore where litter comes from and learn how a cleanup can protect a place we all enjoy.</p>
-                <ul>
-                  <li>Learn responsible litter collection</li>
-                  <li>Record common types of waste</li>
-                  <li>Reflect on ways to prevent litter</li>
-                </ul>
-                <div class="activity-meta mt-auto">Sample format · Half-day · Beginner friendly</div>
-                <a class="btn btn-forest" href="../join/index.html?activity=cleanup">I'm interested <span class="ms-2"
-                    aria-hidden="true">↗</span></a>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-6 col-lg-4" data-activity data-category="biodiversity">
-            <article class="card activity-card" id="planting">
-              <img class="activity-image" src="../assets/images/planting.jpg"
-                alt="A hand trowel and potting soil on a gardening table" width="1000" height="667">
-              <div class="card-body d-flex flex-column"><span class="activity-category">Biodiversity · Hands-on</span>
-                <h3>Room to grow</h3>
-                <p>Discover the small details of plant care and the value of choosing plants suited to their
-                  surroundings.</p>
-                <ul>
-                  <li>Explore thoughtful plant selection</li>
-                  <li>Practise potting and watering</li>
-                  <li>Make a simple ongoing care plan</li>
-                </ul>
-                <div class="activity-meta mt-auto">Sample format · Two hours · Beginner friendly</div>
-                <a class="btn btn-forest" href="../join/index.html?activity=planting">I'm interested <span class="ms-2"
-                    aria-hidden="true">↗</span></a>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-6 col-lg-4" data-activity data-category="everyday">
-            <article class="card activity-card" id="workshop">
-              <img class="activity-image" src="../assets/images/circular.svg"
-                alt="Illustration of reusable everyday objects and a potted plant" width="800" height="500">
-              <div class="card-body d-flex flex-column"><span class="activity-category">Everyday action ·
-                  Workshop</span>
-                <h3>Waste less. Live more.</h3>
-                <p>Bring your everyday questions and leave with a practical idea you can try this week.</p>
-                <ul>
-                  <li>Compare reusable alternatives</li>
-                  <li>Discuss local recycling guidance</li>
-                  <li>Choose one achievable habit</li>
-                </ul>
-                <div class="activity-meta mt-auto">Sample format · Ninety minutes · Indoors</div>
-                <a class="btn btn-forest" href="../join/index.html?activity=workshop">I'm interested <span class="ms-2"
-                    aria-hidden="true">↗</span></a>
-              </div>
-            </article>
-          </div>
+      <!-- Finish this set of navigation links. -->
+      </nav>
+    <!-- Finish the site header. -->
+    </header>
+    <!-- Mark the main content and provide a destination for the skip link. -->
+    <main id="main-content">
+      <!-- Group a distinct part of the page under its own heading. -->
+      <section class="page-intro">
+        <!-- Keep the content centred with a readable maximum width and side padding. -->
+        <div class="container">
+          <!-- Show the current page location with breadcrumb links. -->
+          <nav aria-label="Breadcrumb">
+            <!-- Keep these breadcrumb items in their reading order. -->
+            <ol class="breadcrumb">
+              <!-- Keep this link or point as one item in its parent list. -->
+              <li class="breadcrumb-item">
+                <!-- Provide a real hyperlink so visitors can reach the linked page or section. -->
+                <a href="../index.html">
+                  <!-- Show this text to the visitor. -->
+                  Home
+                <!-- Finish this a element. -->
+                </a>
+              <!-- Finish this list item. -->
+              </li>
+              <!-- Keep this link or point as one item in its parent list. -->
+              <li class="breadcrumb-item active" aria-current="page">
+                <!-- Show this text to the visitor. -->
+                Our activities
+              <!-- Finish this list item. -->
+              </li>
+            <!-- Finish this ordered list. -->
+            </ol>
+          <!-- Finish this set of navigation links. -->
+          </nav>
+          <!-- Show a short label above the main heading for this section. -->
+          <span class="eyebrow">
+            <!-- Show this text to the visitor. -->
+            Find your kind of action
+          <!-- Finish this span element. -->
+          </span>
+          <!-- Give this page its main heading. -->
+          <h1>
+            <!-- Show this text to the visitor. -->
+            A little time.
+            <!-- Start a new line without starting a separate paragraph. -->
+            <br>
+            <!-- Show this text to the visitor. -->
+            A world of possibility.
+          <!-- Finish this h1 element. -->
+          </h1>
+          <!-- Present a readable paragraph of supporting information. -->
+          <p class="mt-4">
+            <!-- Show this text to the visitor. -->
+            Outdoors or around a table, there is a way for everyone to get involved. Choose something that sparks your curiosity.
+          <!-- Finish this p element. -->
+          </p>
+          <!-- Explain that this website and its activities are a classroom demonstration. -->
+          <p class="demo-label mb-0">
+            <!-- Show this text to the visitor. -->
+            Educational demo: the following activities are sample ideas, not scheduled events or confirmed bookings.
+          <!-- Finish this p element. -->
+          </p>
+        <!-- Finish this layout group. -->
         </div>
-      </div>
-    </section>
-    <section class="section-space preparation" aria-labelledby="prepare-title">
+      <!-- Finish this section of related content. -->
+      </section>
+      <!-- Group a distinct part of the page under its own heading. -->
+      <section class="section-space" aria-labelledby="activity-list-title">
+        <!-- Keep the content centred with a readable maximum width and side padding. -->
+        <div class="container">
+          <!-- Introduce this section with a heading that keeps the page structure clear. -->
+          <h2 class="visually-hidden" id="activity-list-title">
+            <!-- Show this text to the visitor. -->
+            Explore our sample activities
+          <!-- Finish this h2 element. -->
+          </h2>
+          <!-- Group related content so the CSS layout and spacing can be applied together. -->
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+            <!-- Group the category buttons and give their purpose an accessible label. -->
+            <div class="filter-bar" role="group" aria-label="Filter activities by category">
+              <!-- Filter activities using this category and expose the selected state with aria-pressed. -->
+              <button class="filter-button" type="button" data-filter="all" aria-pressed="true" disabled>
+                <!-- Show this text to the visitor. -->
+                All activities
+              <!-- Finish this button element. -->
+              </button>
+              <!-- Filter activities using this category and expose the selected state with aria-pressed. -->
+              <button class="filter-button" type="button" data-filter="conservation" aria-pressed="false" disabled>
+                <!-- Show this text to the visitor. -->
+                Conservation
+              <!-- Finish this button element. -->
+              </button>
+              <!-- Filter activities using this category and expose the selected state with aria-pressed. -->
+              <button class="filter-button" type="button" data-filter="biodiversity" aria-pressed="false" disabled>
+                <!-- Show this text to the visitor. -->
+                Biodiversity
+              <!-- Finish this button element. -->
+              </button>
+              <!-- Filter activities using this category and expose the selected state with aria-pressed. -->
+              <button class="filter-button" type="button" data-filter="everyday" aria-pressed="false" disabled>
+                <!-- Show this text to the visitor. -->
+                Everyday action
+              <!-- Finish this button element. -->
+              </button>
+            <!-- Finish this layout group. -->
+            </div>
+            <!-- Present a readable paragraph of supporting information. -->
+            <p class="results-count" id="filter-status" role="status" aria-live="polite" aria-atomic="true">
+              <!-- Show this text to the visitor. -->
+              Showing 3 of 3 activities.
+            <!-- Finish this p element. -->
+            </p>
+          <!-- Finish this layout group. -->
+          </div>
+          <!-- Show this fallback message only when JavaScript is unavailable. -->
+          <noscript>
+            <!-- Present a readable paragraph of supporting information. -->
+            <p>
+              <!-- Show this text to the visitor. -->
+              JavaScript is off, so all activities are shown and category filters are unavailable.
+            <!-- Finish this p element. -->
+            </p>
+          <!-- Finish the message shown when JavaScript is off. -->
+          </noscript>
+          <!-- Arrange the next columns in a Bootstrap row with the chosen spacing. -->
+          <div class="row g-4 activity-grid">
+            <!-- Store this card's filter category and choose its responsive column width. -->
+            <div class="col-md-6 col-lg-4" data-activity data-category="conservation">
+              <!-- Keep this activity description together as a self-contained card. -->
+              <article class="card activity-card" id="coastline">
+                <!-- Show a local image with a text description and dimensions to keep the layout stable. -->
+                <img class="activity-image" src="../assets/images/coast.jpg" alt="A bright sandy coastline beside clear blue water" width="1000" height="667">
+                <!-- Group related content so the CSS layout and spacing can be applied together. -->
+                <div class="card-body d-flex flex-column">
+                  <!-- Style this small piece of text without creating a new section. -->
+                  <span class="activity-category">
+                    <!-- Show this text to the visitor. -->
+                    Conservation · Outdoors
+                  <!-- Finish this span element. -->
+                  </span>
+                  <!-- Introduce this section with a heading that keeps the page structure clear. -->
+                  <h3>
+                    <!-- Show this text to the visitor. -->
+                    A cleaner coastline
+                  <!-- Finish this h3 element. -->
+                  </h3>
+                  <!-- Present a readable paragraph of supporting information. -->
+                  <p>
+                    <!-- Show this text to the visitor. -->
+                    Explore where litter comes from and learn how a cleanup can protect a place we all enjoy.
+                  <!-- Finish this p element. -->
+                  </p>
+                  <!-- Group related items in an unordered list. -->
+                  <ul>
+                    <!-- Keep this link or point as one item in its parent list. -->
+                    <li>
+                      <!-- Show this text to the visitor. -->
+                      Learn responsible litter collection
+                    <!-- Finish this list item. -->
+                    </li>
+                    <!-- Keep this link or point as one item in its parent list. -->
+                    <li>
+                      <!-- Show this text to the visitor. -->
+                      Record common types of waste
+                    <!-- Finish this list item. -->
+                    </li>
+                    <!-- Keep this link or point as one item in its parent list. -->
+                    <li>
+                      <!-- Show this text to the visitor. -->
+                      Reflect on ways to prevent litter
+                    <!-- Finish this list item. -->
+                    </li>
+                  <!-- Finish this list. -->
+                  </ul>
+                  <!-- Group related content so the CSS layout and spacing can be applied together. -->
+                  <div class="activity-meta mt-auto">
+                    <!-- Show this text to the visitor. -->
+                    Sample format · Half-day · Beginner friendly
+                  <!-- Finish this layout group. -->
+                  </div>
+                  <!-- Open the Join page with this activity preselected in the form. -->
+                  <a class="btn btn-forest" href="../join/index.html?activity=cleanup">
+                    <!-- Show this text to the visitor. -->
+                    I'm interested
+                    <!-- Show a decorative symbol without making a screen reader announce it. -->
+                    <span class="ms-2" aria-hidden="true">
+                      <!-- Show this text to the visitor. -->
+                      ↗
+                    <!-- Finish this span element. -->
+                    </span>
+                  <!-- Finish this a element. -->
+                  </a>
+                <!-- Finish this layout group. -->
+                </div>
+              <!-- Finish this activity card. -->
+              </article>
+            <!-- Finish this layout group. -->
+            </div>
+            <!-- Store this card's filter category and choose its responsive column width. -->
+            <div class="col-md-6 col-lg-4" data-activity data-category="biodiversity">
+              <!-- Keep this activity description together as a self-contained card. -->
+              <article class="card activity-card" id="planting">
+                <!-- Show a local image with a text description and dimensions to keep the layout stable. -->
+                <img class="activity-image" src="../assets/images/planting.jpg" alt="A hand trowel and potting soil on a gardening table" width="1000" height="667">
+                <!-- Group related content so the CSS layout and spacing can be applied together. -->
+                <div class="card-body d-flex flex-column">
+                  <!-- Style this small piece of text without creating a new section. -->
+                  <span class="activity-category">
+                    <!-- Show this text to the visitor. -->
+                    Biodiversity · Hands-on
+                  <!-- Finish this span element. -->
+                  </span>
+                  <!-- Introduce this section with a heading that keeps the page structure clear. -->
+                  <h3>
+                    <!-- Show this text to the visitor. -->
+                    Room to grow
+                  <!-- Finish this h3 element. -->
+                  </h3>
+                  <!-- Present a readable paragraph of supporting information. -->
+                  <p>
+                    <!-- Show this text to the visitor. -->
+                    Discover the small details of plant care and the value of choosing plants suited to their surroundings.
+                  <!-- Finish this p element. -->
+                  </p>
+                  <!-- Group related items in an unordered list. -->
+                  <ul>
+                    <!-- Keep this link or point as one item in its parent list. -->
+                    <li>
+                      <!-- Show this text to the visitor. -->
+                      Explore thoughtful plant selection
+                    <!-- Finish this list item. -->
+                    </li>
+                    <!-- Keep this link or point as one item in its parent list. -->
+                    <li>
+                      <!-- Show this text to the visitor. -->
+                      Practise potting and watering
+                    <!-- Finish this list item. -->
+                    </li>
+                    <!-- Keep this link or point as one item in its parent list. -->
+                    <li>
+                      <!-- Show this text to the visitor. -->
+                      Make a simple ongoing care plan
+                    <!-- Finish this list item. -->
+                    </li>
+                  <!-- Finish this list. -->
+                  </ul>
+                  <!-- Group related content so the CSS layout and spacing can be applied together. -->
+                  <div class="activity-meta mt-auto">
+                    <!-- Show this text to the visitor. -->
+                    Sample format · Two hours · Beginner friendly
+                  <!-- Finish this layout group. -->
+                  </div>
+                  <!-- Open the Join page with this activity preselected in the form. -->
+                  <a class="btn btn-forest" href="../join/index.html?activity=planting">
+                    <!-- Show this text to the visitor. -->
+                    I'm interested
+                    <!-- Show a decorative symbol without making a screen reader announce it. -->
+                    <span class="ms-2" aria-hidden="true">
+                      <!-- Show this text to the visitor. -->
+                      ↗
+                    <!-- Finish this span element. -->
+                    </span>
+                  <!-- Finish this a element. -->
+                  </a>
+                <!-- Finish this layout group. -->
+                </div>
+              <!-- Finish this activity card. -->
+              </article>
+            <!-- Finish this layout group. -->
+            </div>
+            <!-- Store this card's filter category and choose its responsive column width. -->
+            <div class="col-md-6 col-lg-4" data-activity data-category="everyday">
+              <!-- Keep this activity description together as a self-contained card. -->
+              <article class="card activity-card" id="workshop">
+                <!-- Show a local image with a text description and dimensions to keep the layout stable. -->
+                <img class="activity-image" src="../assets/images/circular.svg" alt="Illustration of reusable everyday objects and a potted plant" width="800" height="500">
+                <!-- Group related content so the CSS layout and spacing can be applied together. -->
+                <div class="card-body d-flex flex-column">
+                  <!-- Style this small piece of text without creating a new section. -->
+                  <span class="activity-category">
+                    <!-- Show this text to the visitor. -->
+                    Everyday action · Workshop
+                  <!-- Finish this span element. -->
+                  </span>
+                  <!-- Introduce this section with a heading that keeps the page structure clear. -->
+                  <h3>
+                    <!-- Show this text to the visitor. -->
+                    Waste less. Live more.
+                  <!-- Finish this h3 element. -->
+                  </h3>
+                  <!-- Present a readable paragraph of supporting information. -->
+                  <p>
+                    <!-- Show this text to the visitor. -->
+                    Bring your everyday questions and leave with a practical idea you can try this week.
+                  <!-- Finish this p element. -->
+                  </p>
+                  <!-- Group related items in an unordered list. -->
+                  <ul>
+                    <!-- Keep this link or point as one item in its parent list. -->
+                    <li>
+                      <!-- Show this text to the visitor. -->
+                      Compare reusable alternatives
+                    <!-- Finish this list item. -->
+                    </li>
+                    <!-- Keep this link or point as one item in its parent list. -->
+                    <li>
+                      <!-- Show this text to the visitor. -->
+                      Discuss local recycling guidance
+                    <!-- Finish this list item. -->
+                    </li>
+                    <!-- Keep this link or point as one item in its parent list. -->
+                    <li>
+                      <!-- Show this text to the visitor. -->
+                      Choose one achievable habit
+                    <!-- Finish this list item. -->
+                    </li>
+                  <!-- Finish this list. -->
+                  </ul>
+                  <!-- Group related content so the CSS layout and spacing can be applied together. -->
+                  <div class="activity-meta mt-auto">
+                    <!-- Show this text to the visitor. -->
+                    Sample format · Ninety minutes · Indoors
+                  <!-- Finish this layout group. -->
+                  </div>
+                  <!-- Open the Join page with this activity preselected in the form. -->
+                  <a class="btn btn-forest" href="../join/index.html?activity=workshop">
+                    <!-- Show this text to the visitor. -->
+                    I'm interested
+                    <!-- Show a decorative symbol without making a screen reader announce it. -->
+                    <span class="ms-2" aria-hidden="true">
+                      <!-- Show this text to the visitor. -->
+                      ↗
+                    <!-- Finish this span element. -->
+                    </span>
+                  <!-- Finish this a element. -->
+                  </a>
+                <!-- Finish this layout group. -->
+                </div>
+              <!-- Finish this activity card. -->
+              </article>
+            <!-- Finish this layout group. -->
+            </div>
+          <!-- Finish this layout group. -->
+          </div>
+        <!-- Finish this layout group. -->
+        </div>
+      <!-- Finish this section of related content. -->
+      </section>
+      <!-- Group a distinct part of the page under its own heading. -->
+      <section class="section-space preparation" aria-labelledby="prepare-title">
+        <!-- Keep the content centred with a readable maximum width and side padding. -->
+        <div class="container">
+          <!-- Show a short label above the main heading for this section. -->
+          <span class="eyebrow">
+            <!-- Show this text to the visitor. -->
+            First time? You're welcome here.
+          <!-- Finish this span element. -->
+          </span>
+          <!-- Introduce this section with a heading that keeps the page structure clear. -->
+          <h2 class="section-title mb-5" id="prepare-title">
+            <!-- Show this text to the visitor. -->
+            Bring your curiosity.
+            <!-- Start a new line without starting a separate paragraph. -->
+            <br>
+            <!-- Show this text to the visitor. -->
+            We'll start there.
+          <!-- Finish this h2 element. -->
+          </h2>
+          <!-- Arrange the next columns in a Bootstrap row with the chosen spacing. -->
+          <div class="row g-4">
+            <!-- Set this content's column width at the chosen screen sizes. -->
+            <div class="col-md-4">
+              <!-- Show a decorative symbol without making a screen reader announce it. -->
+              <span class="step-marker" aria-hidden="true">
+                <!-- Show this text to the visitor. -->
+                01
+              <!-- Finish this span element. -->
+              </span>
+              <!-- Introduce this section with a heading that keeps the page structure clear. -->
+              <h3>
+                <!-- Show this text to the visitor. -->
+                Pick an interest
+              <!-- Finish this h3 element. -->
+              </h3>
+              <!-- Present a readable paragraph of supporting information. -->
+              <p>
+                <!-- Show this text to the visitor. -->
+                Choose the activity that feels right for you. No previous experience is needed for these sample sessions.
+              <!-- Finish this p element. -->
+              </p>
+            <!-- Finish this layout group. -->
+            </div>
+            <!-- Set this content's column width at the chosen screen sizes. -->
+            <div class="col-md-4">
+              <!-- Show a decorative symbol without making a screen reader announce it. -->
+              <span class="step-marker" aria-hidden="true">
+                <!-- Show this text to the visitor. -->
+                02
+              <!-- Finish this span element. -->
+              </span>
+              <!-- Introduce this section with a heading that keeps the page structure clear. -->
+              <h3>
+                <!-- Show this text to the visitor. -->
+                Think ahead
+              <!-- Finish this h3 element. -->
+              </h3>
+              <!-- Present a readable paragraph of supporting information. -->
+              <p>
+                <!-- Show this text to the visitor. -->
+                For a real outdoor event, check the organizer's weather, clothing, accessibility, and equipment guidance.
+              <!-- Finish this p element. -->
+              </p>
+            <!-- Finish this layout group. -->
+            </div>
+            <!-- Set this content's column width at the chosen screen sizes. -->
+            <div class="col-md-4">
+              <!-- Show a decorative symbol without making a screen reader announce it. -->
+              <span class="step-marker" aria-hidden="true">
+                <!-- Show this text to the visitor. -->
+                03
+              <!-- Finish this span element. -->
+              </span>
+              <!-- Introduce this section with a heading that keeps the page structure clear. -->
+              <h3>
+                <!-- Show this text to the visitor. -->
+                Keep the conversation going
+              <!-- Finish this h3 element. -->
+              </h3>
+              <!-- Present a readable paragraph of supporting information. -->
+              <p>
+                <!-- Show this text to the visitor. -->
+                Share what you learn, ask questions, and try one small change in your everyday routine.
+              <!-- Finish this p element. -->
+              </p>
+            <!-- Finish this layout group. -->
+            </div>
+          <!-- Finish this layout group. -->
+          </div>
+        <!-- Finish this layout group. -->
+        </div>
+      <!-- Finish this section of related content. -->
+      </section>
+      <!-- Group a distinct part of the page under its own heading. -->
+      <section class="section-space">
+        <!-- Keep the content centred with a readable maximum width and side padding. -->
+        <div class="container">
+          <!-- Group related content so the CSS layout and spacing can be applied together. -->
+          <div class="resource-box d-lg-flex justify-content-between align-items-center gap-4">
+            <!-- Group related content so the CSS layout and spacing can be applied together. -->
+            <div>
+              <!-- Introduce this section with a heading that keeps the page structure clear. -->
+              <h2>
+                <!-- Show this text to the visitor. -->
+                Curiosity does not stop here.
+              <!-- Finish this h2 element. -->
+              </h2>
+              <!-- Present a readable paragraph of supporting information. -->
+              <p class="mb-lg-0">
+                <!-- Show this text to the visitor. -->
+                Explore environmental stories and ideas from the United Nations Environment Programme.
+              <!-- Finish this p element. -->
+              </p>
+            <!-- Finish this layout group. -->
+            </div>
+            <!-- Open this outside resource in a new tab without giving it access to this tab. -->
+            <a class="btn btn-outline-forest flex-shrink-0" href="https://www.unep.org/" target="_blank" rel="noopener noreferrer">
+              <!-- Show this text to the visitor. -->
+              Explore UNEP ↗
+              <!-- Give screen readers extra context without changing the visible layout. -->
+              <span class="visually-hidden">
+                <!-- Show this text to the visitor. -->
+                (opens in a new tab)
+              <!-- Finish this span element. -->
+              </span>
+            <!-- Finish this a element. -->
+            </a>
+          <!-- Finish this layout group. -->
+          </div>
+        <!-- Finish this layout group. -->
+        </div>
+      <!-- Finish this section of related content. -->
+      </section>
+    <!-- Finish the main page content. -->
+    </main>
+    <!-- Group the page links, outside resources, and project notice at the bottom. -->
+    <footer class="site-footer">
+      <!-- Keep the content centred with a readable maximum width and side padding. -->
       <div class="container">
-        <span class="eyebrow">First time? You're welcome here.</span>
-        <h2 class="section-title mb-5" id="prepare-title">Bring your curiosity.<br>We'll start there.</h2>
+        <!-- Arrange the next columns in a Bootstrap row with the chosen spacing. -->
         <div class="row g-4">
-          <div class="col-md-4"><span class="step-marker" aria-hidden="true">01</span>
-            <h3>Pick an interest</h3>
-            <p>Choose the activity that feels right for you. No previous experience is needed for these sample sessions.
+          <!-- Set this content's column width at the chosen screen sizes. -->
+          <div class="col-lg-6">
+            <!-- Make the club logo a link back to the home page. -->
+            <a class="navbar-brand" href="../index.html">
+              <!-- Show a decorative logo without making screen readers repeat nearby text. -->
+              <img class="brand-icon" src="../assets/images/leaf.svg" alt="" width="30" height="34">
+              <!-- Show this text to the visitor. -->
+              greensteps.
+            <!-- Finish this a element. -->
+            </a>
+            <!-- Present a readable paragraph of supporting information. -->
+            <p class="footer-copy">
+              <!-- Show this text to the visitor. -->
+              Small actions. Shared purpose.
+              <!-- Start a new line without starting a separate paragraph. -->
+              <br>
+              <!-- Show this text to the visitor. -->
+              A student community for a greener tomorrow.
+            <!-- Finish this p element. -->
             </p>
+          <!-- Finish this layout group. -->
           </div>
-          <div class="col-md-4"><span class="step-marker" aria-hidden="true">02</span>
-            <h3>Think ahead</h3>
-            <p>For a real outdoor event, check the organizer's weather, clothing, accessibility, and equipment guidance.
-            </p>
+          <!-- Set this content's column width at the chosen screen sizes. -->
+          <div class="col-6 col-lg-3">
+            <!-- Introduce this section with a heading that keeps the page structure clear. -->
+            <h2 class="footer-heading">
+              <!-- Show this text to the visitor. -->
+              Find your way
+            <!-- Finish this h2 element. -->
+            </h2>
+            <!-- Group related items in an unordered list. -->
+            <ul class="footer-links">
+              <!-- Keep this link or point as one item in its parent list. -->
+              <li>
+                <!-- Provide a real hyperlink so visitors can reach the linked page or section. -->
+                <a href="../index.html">
+                  <!-- Show this text to the visitor. -->
+                  Home
+                <!-- Finish this a element. -->
+                </a>
+              <!-- Finish this list item. -->
+              </li>
+              <!-- Keep this link or point as one item in its parent list. -->
+              <li>
+                <!-- Provide a real hyperlink so visitors can reach the linked page or section. -->
+                <a href="index.html">
+                  <!-- Show this text to the visitor. -->
+                  Our activities
+                <!-- Finish this a element. -->
+                </a>
+              <!-- Finish this list item. -->
+              </li>
+              <!-- Keep this link or point as one item in its parent list. -->
+              <li>
+                <!-- Provide a real hyperlink so visitors can reach the linked page or section. -->
+                <a href="../join/index.html">
+                  <!-- Show this text to the visitor. -->
+                  Join the club
+                <!-- Finish this a element. -->
+                </a>
+              <!-- Finish this list item. -->
+              </li>
+            <!-- Finish this list. -->
+            </ul>
+          <!-- Finish this layout group. -->
           </div>
-          <div class="col-md-4"><span class="step-marker" aria-hidden="true">03</span>
-            <h3>Keep the conversation going</h3>
-            <p>Share what you learn, ask questions, and try one small change in your everyday routine.</p>
+          <!-- Set this content's column width at the chosen screen sizes. -->
+          <div class="col-6 col-lg-3">
+            <!-- Introduce this section with a heading that keeps the page structure clear. -->
+            <h2 class="footer-heading">
+              <!-- Show this text to the visitor. -->
+              Keep exploring
+            <!-- Finish this h2 element. -->
+            </h2>
+            <!-- Group related items in an unordered list. -->
+            <ul class="footer-links">
+              <!-- Keep this link or point as one item in its parent list. -->
+              <li>
+                <!-- Open this outside resource in a new tab without giving it access to this tab. -->
+                <a href="https://www.unep.org/" target="_blank" rel="noopener noreferrer">
+                  <!-- Show this text to the visitor. -->
+                  UN Environment Programme ↗
+                  <!-- Give screen readers extra context without changing the visible layout. -->
+                  <span class="visually-hidden">
+                    <!-- Show this text to the visitor. -->
+                    (opens in a new tab)
+                  <!-- Finish this span element. -->
+                  </span>
+                <!-- Finish this a element. -->
+                </a>
+              <!-- Finish this list item. -->
+              </li>
+              <!-- Keep this link or point as one item in its parent list. -->
+              <li>
+                <!-- Open this outside resource in a new tab without giving it access to this tab. -->
+                <a href="https://www.worldwildlife.org/" target="_blank" rel="noopener noreferrer">
+                  <!-- Show this text to the visitor. -->
+                  World Wildlife Fund ↗
+                  <!-- Give screen readers extra context without changing the visible layout. -->
+                  <span class="visually-hidden">
+                    <!-- Show this text to the visitor. -->
+                    (opens in a new tab)
+                  <!-- Finish this span element. -->
+                  </span>
+                <!-- Finish this a element. -->
+                </a>
+              <!-- Finish this list item. -->
+              </li>
+              <!-- Keep this link or point as one item in its parent list. -->
+              <li>
+                <!-- Provide a real hyperlink so visitors can reach the linked page or section. -->
+                <a href="../CREDITS.md">
+                  <!-- Show this text to the visitor. -->
+                  Image &amp; library credits
+                <!-- Finish this a element. -->
+                </a>
+              <!-- Finish this list item. -->
+              </li>
+            <!-- Finish this list. -->
+            </ul>
+          <!-- Finish this layout group. -->
           </div>
+        <!-- Finish this layout group. -->
         </div>
+        <!-- Group related content so the CSS layout and spacing can be applied together. -->
+        <div class="footer-bottom">
+          <!-- Style this small piece of text without creating a new section. -->
+          <span>
+            <!-- Show this text to the visitor. -->
+            © 2026 GreenSteps · A fictional club for an educational project.
+          <!-- Finish this span element. -->
+          </span>
+          <!-- Style this small piece of text without creating a new section. -->
+          <span>
+            <!-- Show this text to the visitor. -->
+            Made with care for our shared home.
+          <!-- Finish this span element. -->
+          </span>
+        <!-- Finish this layout group. -->
+        </div>
+      <!-- Finish this layout group. -->
       </div>
-    </section>
-    <section class="section-space">
-      <div class="container">
-        <div class="resource-box d-lg-flex justify-content-between align-items-center gap-4">
-          <div>
-            <h2>Curiosity does not stop here.</h2>
-            <p class="mb-lg-0">Explore environmental stories and ideas from the United Nations Environment Programme.
-            </p>
-          </div>
-          <a class="btn btn-outline-forest flex-shrink-0" href="https://www.unep.org/" target="_blank"
-            rel="noopener noreferrer">Explore UNEP ↗ <span class="visually-hidden">(opens in a new tab)</span></a>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-6"><a class="navbar-brand" href="../index.html"><img class="brand-icon"
-              src="../assets/images/leaf.svg" alt="" width="30" height="34">greensteps.</a>
-          <p class="footer-copy">Small actions. Shared purpose.<br>A student community for a greener tomorrow.</p>
-        </div>
-        <div class="col-6 col-lg-3">
-          <h2 class="footer-heading">Find your way</h2>
-          <ul class="footer-links">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="index.html">Our activities</a></li>
-            <li><a href="../join/index.html">Join the club</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-3">
-          <h2 class="footer-heading">Keep exploring</h2>
-          <ul class="footer-links">
-            <li><a href="https://www.unep.org/" target="_blank" rel="noopener noreferrer">UN Environment Programme ↗
-                <span class="visually-hidden">(opens in a new tab)</span></a></li>
-            <li><a href="https://www.worldwildlife.org/" target="_blank" rel="noopener noreferrer">World Wildlife Fund ↗
-                <span class="visually-hidden">(opens in a new tab)</span></a></li>
-            <li><a href="../CREDITS.md">Image &amp; library credits</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom"><span>© 2026 GreenSteps · A fictional club for an educational project.</span><span>Made
-          with care for our shared home.</span></div>
-    </div>
-  </footer>
-</body>
-
+    <!-- Finish the site footer. -->
+    </footer>
+  <!-- Finish the visible page. -->
+  </body>
+<!-- Finish the HTML document. -->
 </html>

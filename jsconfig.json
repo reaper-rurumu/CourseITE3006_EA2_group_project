@@ -1,12 +1,24 @@
+// Configure type checking for our one shared browser script.
 {
+  // Group the settings used by the JavaScript type checker.
   "compilerOptions": {
+    // Check JavaScript files instead of treating them as unchecked scripts.
     "checkJs": true,
+    // Allow JavaScript files to be included in this checking project.
     "allowJs": true,
+    // Catch missing values and other unsafe assumptions with strict checks.
     "strict": true,
+    // Check our code without generating extra output files.
     "noEmit": true,
+    // Understand the JavaScript features used by this website.
     "target": "ES2017",
+    // Include the browser and DOM types used by our script.
     "lib": ["ES2017", "DOM", "DOM.Iterable"]
+  // Finish the checker settings.
   },
-  "include": ["script.js", "activities/script.js", "join/script.js"],
+  // All authored browser behaviour now lives in this one root file.
+  "include": ["script.js"],
+  // Leave the unchanged third-party Bootstrap files out of our checks.
   "exclude": ["assets/vendor"]
+// Finish the checking configuration.
 }

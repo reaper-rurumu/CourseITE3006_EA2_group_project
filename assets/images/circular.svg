@@ -1,16 +1,30 @@
-<!-- This original illustration shows a refill bottle, a reused jar, and a plant. -->
+<!-- Set up the drawing area so this illustration scales cleanly. -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+<!-- Draw a rectangular part of the illustration, with optional rounded corners. -->
   <rect width="800" height="500" fill="#d9e4cf"/>
+<!-- Draw a circle at the chosen position and size. -->
   <circle cx="405" cy="235" r="178" fill="#eaf0e2"/>
+<!-- Draw an oval shape, used here for the soft ground shadow. -->
   <ellipse cx="410" cy="415" rx="235" ry="20" fill="#bdcfae"/>
+<!-- Draw a rectangular part of the illustration, with optional rounded corners. -->
   <rect x="223" y="180" width="106" height="222" rx="22" fill="#47735a"/>
+<!-- Draw a rectangular part of the illustration, with optional rounded corners. -->
   <rect x="248" y="144" width="55" height="42" rx="8" fill="#173b2c"/>
+<!-- Draw this part of the illustration using the listed points, curves, and colours. -->
   <path d="M264 148v-26h24v26" stroke="#173b2c" stroke-width="9"/>
+<!-- Draw a rectangular part of the illustration, with optional rounded corners. -->
   <rect x="241" y="247" width="70" height="86" rx="4" fill="#d7ed9c"/>
+<!-- Draw this part of the illustration using the listed points, curves, and colours. -->
   <path d="M276 312v-41m0 24c-21 0-22-20-22-20 22 0 22 20 22 20Zm0-10c20 0 20-20 20-20-20 0-20 20-20 20Z" stroke="#47735a" stroke-width="3"/>
+<!-- Draw a rectangular part of the illustration, with optional rounded corners. -->
   <rect x="357" y="285" width="125" height="116" rx="18" fill="#c3d6b0" stroke="#6b8a58" stroke-width="4"/>
+<!-- Draw a rectangular part of the illustration, with optional rounded corners. -->
   <rect x="352" y="272" width="135" height="22" rx="6" fill="#8da879"/>
+<!-- Draw this part of the illustration using the listed points, curves, and colours. -->
   <path d="M520 314h110l-15 88h-80Z" fill="#bf845f"/>
+<!-- Draw this part of the illustration using the listed points, curves, and colours. -->
   <path d="M575 316v-85m0 43c-58-1-66-57-66-57 59-3 66 57 66 57Zm0-20c60 0 70-62 70-62-59 0-70 62-70 62Z" fill="#47735a"/>
+<!-- Draw this part of the illustration using the listed points, curves, and colours. -->
   <path d="M354 132c60-52 147-28 171 18m-27-6 29 9 4-31" stroke="#8da879" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- Finish the scalable illustration. -->
 </svg>

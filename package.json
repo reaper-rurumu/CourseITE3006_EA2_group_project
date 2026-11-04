@@ -5,7 +5,7 @@
   "description": "A buildless three-page environmental club demonstration website.",
   "scripts": {
     "typecheck": "tsc --project jsconfig.json",
-    "check:syntax": "node --check script.js && node --check activities/script.js && node --check join/script.js"
+    "check:syntax": "node --check script.js"
   },
   "devDependencies": {
     "typescript": "4.2.4"

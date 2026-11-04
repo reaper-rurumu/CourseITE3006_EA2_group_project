@@ -12,15 +12,13 @@ Extract the complete ZIP, then double-click **index.html** in the greensteps fol
 greensteps/
   index.html              Home page
   style.css               Shared theme and homepage styles
-  script.js               Shared keyboard navigation behaviour
+  script.js               Navigation, activity filters, and joining-form logic
   activities/
     index.html            Activity descriptions and filter controls
     style.css             Activity-specific styles
-    script.js             Category filters and accessible result count
   join/
     index.html            Demo joining form and confirmation
     style.css             Form and confirmation styles
-    script.js             Validation and safe form processing
   assets/
     images/               Local photographs and original SVG illustrations
     vendor/               Bootstrap CSS, JS bundle, and original licence
@@ -32,7 +30,9 @@ greensteps/
 
 ## How the code stays simple
 
-Every page has its own HTML, CSS, and JavaScript. The root stylesheet provides the common design. Page styles load afterwards. Each page includes its navigation directly, so HTML fragments and a local server are unnecessary. Bootstrap handles mobile menu toggling; our shared script adds Escape-key support. Comments explain important HTML sections, CSS groups, functions, and validation rules in plain English. Third-party Bootstrap files are kept unchanged.
+Each page has its own HTML and CSS. All three pages load the same root `script.js` once. It contains three simple setup functions: navigation, activity filters, and the joining form. Each function checks for its elements and returns safely when the current page does not need it. The root stylesheet provides the common design, and page styles load afterwards. Each page includes its navigation directly, so HTML fragments and a local server are unnecessary. Bootstrap handles mobile menu toggling; our script adds Escape-key support.
+
+Every authored HTML, CSS, JavaScript, and SVG code line has a plain-English explanation. Complete HTML tags are kept on one line so comments do not break attributes. Empty textareas stay empty, and comments are kept outside the raw title text. File-import lines do not need explanations, and third-party Bootstrap files are kept unchanged. The checker configuration supports comments directly. `package.json` must stay valid JSON, so its line-by-line explanations appear below instead.
 
 The activities page filters existing cards rather than creating HTML strings. The joining page combines HTML5 constraints with JavaScript checks and renders a summary using `textContent`. Names can use non-English characters. Known activity IDs are checked before use, including activity values passed in links.
 
@@ -54,6 +54,39 @@ The checker validates JavaScript using JSDoc types, strict null checks, DOM type
 
 ## Editing the site
 
-Change shared colours in the `:root` block of the root stylesheet. Edit each page's content in its own HTML file. If you add an activity, update its card, filter category, joining-form option, and the checked activity list in the joining script. The filter result total is currently three, matching the three demonstration cards.
+Change shared colours in the `:root` block of the root stylesheet. Edit each page's content in its own HTML file. If you add an activity, update its card, filter category, joining-form option, and the checked activity list in the root script. The filter result total is calculated from the actual number of activity cards.
 
 The footer links to independent environmental organizations for further reading; no affiliation is claimed. See CREDITS.md for image sources and Bootstrap's licence.
+
+## package.json explained line by line
+
+JSON does not allow comments. Adding them to the real package file would stop npm from reading it. This annotated copy explains the same settings; the real file stays valid JSON.
+
+```jsonc
+// Start the project information object.
+{
+  // Give this project a simple package name.
+  "name": "greensteps-club",
+  // Record the current project version.
+  "version": "1.0.0",
+  // Prevent accidental publication as an npm package.
+  "private": true,
+  // Describe what this local website demonstrates.
+  "description": "A buildless three-page environmental club demonstration website.",
+  // Group the optional commands used during development.
+  "scripts": {
+    // Check the shared script using the settings in jsconfig.json.
+    "typecheck": "tsc --project jsconfig.json",
+    // Check the JavaScript syntax without running the website.
+    "check:syntax": "node --check script.js"
+  // Finish the development commands.
+  },
+  // List tools needed only for development, not for opening the website.
+  "devDependencies": {
+    // Pin the type checker version so the checks remain repeatable.
+    "typescript": "4.2.4"
+  // Finish the development tool list.
+  }
+// Finish the project information object.
+}
+```

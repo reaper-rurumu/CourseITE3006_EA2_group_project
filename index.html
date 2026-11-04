@@ -1,210 +1,781 @@
+<!-- Tell the browser to read this file as an HTML5 page. -->
 <!DOCTYPE html>
+<!-- Start the document and identify the main language as English. -->
 <html lang="en">
-
-<head>
-  <!-- UTF-8 supports names and symbols; the viewport enables the mobile layout. -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-    content="GreenSteps is a student environmental protection club. Explore simple ways to protect nature and take your first step with us.">
-  <meta name="theme-color" content="#173b2c">
-  <title>GreenSteps — Small steps. A greener tomorrow.</title>
-  <link rel="icon" href="assets/images/leaf.svg" type="image/svg+xml">
-  <!-- Bootstrap is saved locally, so the design works without an internet connection. -->
-  <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-  <!-- Deferred scripts run in this order after the HTML has been read. -->
-  <script src="assets/vendor/bootstrap.bundle.min.js" defer></script>
-  <script src="script.js" defer></script>
-</head>
-
-<body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
-  <!-- The same small navigation is included on every page to support direct file opening. -->
-  <header class="site-header">
-    <nav class="navbar navbar-expand-lg container" aria-label="Main navigation">
-      <a class="navbar-brand" href="index.html"><img class="brand-icon" src="assets/images/leaf.svg" alt="" width="30"
-          height="34">greensteps<span aria-hidden="true">.</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation"
-        aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation"><span
-          class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="main-navigation">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="index.html" aria-current="page">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="activities/index.html">Our activities</a></li>
-          <li class="nav-item"><a class="nav-link" href="#our-purpose">Our purpose</a></li>
-          <li class="nav-item"><a class="btn btn-forest nav-join" href="join/index.html">Join the club <span
-                class="ms-2" aria-hidden="true">↗</span></a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <main id="main-content">
-    <!-- A real photograph introduces the subject; the overlay keeps the heading readable. -->
-    <section class="hero" aria-labelledby="hero-title">
-      <img class="hero-photo" src="assets/images/forest.jpg" alt="Sunlight falling through a lush green forest"
-        width="1920" height="1280" fetchpriority="high">
-      <div class="container hero-content">
-        <span class="eyebrow">A student club. A shared planet.</span>
-        <h1 id="hero-title">Small steps.<br>A <em>greener</em> tomorrow.</h1>
-        <p class="hero-description">Big change starts with people who care. Find your community, get outside, and turn
-          good intentions into everyday action.</p>
-        <div class="d-flex flex-wrap align-items-center gap-3">
-          <a class="btn btn-lime" href="join/index.html">Take your first step <span class="ms-3 arrow"
-              aria-hidden="true">↗</span></a>
-          <a class="hero-secondary" href="activities/index.html">Explore our activities <span class="ms-2"
-              aria-hidden="true">→</span></a>
+  <!-- Group the page title, settings, and imported files. -->
+  <head>
+    <!-- Use UTF-8 so the page can display English, Chinese names, and symbols. -->
+    <meta charset="UTF-8">
+    <!-- Match the layout width to the device screen for responsive pages. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Describe this page for search engines and link previews. -->
+    <meta name="description" content="GreenSteps is a student environmental protection club. Explore simple ways to protect nature and take your first step with us.">
+    <!-- Suggest our dark green colour for browser interface elements. -->
+    <meta name="theme-color" content="#173b2c">
+    <!-- Set the name shown in the browser tab. -->
+    <title> GreenSteps — Small steps. A greener tomorrow. </title>
+    <link rel="icon" href="assets/images/leaf.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="assets/vendor/bootstrap.bundle.min.js" defer></script>
+    <script src="script.js" defer></script>
+  <!-- Finish the page settings. -->
+  </head>
+  <!-- Start the content that visitors can see and use. -->
+  <body>
+    <!-- Let keyboard users jump straight to the main page content. -->
+    <a class="skip-link" href="#main-content">
+      <!-- Show this text to the visitor. -->
+      Skip to content
+    <!-- Finish this a element. -->
+    </a>
+    <!-- Group the club logo and main navigation at the top of the page. -->
+    <header class="site-header">
+      <!-- Provide labelled navigation that screen readers can identify. -->
+      <nav class="navbar navbar-expand-lg container" aria-label="Main navigation">
+        <!-- Make the club logo a link back to the home page. -->
+        <a class="navbar-brand" href="index.html">
+          <!-- Show a decorative logo without making screen readers repeat nearby text. -->
+          <img class="brand-icon" src="assets/images/leaf.svg" alt="" width="30" height="34">
+          <!-- Show this text to the visitor. -->
+          greensteps
+          <!-- Show a decorative symbol without making a screen reader announce it. -->
+          <span aria-hidden="true">
+            <!-- Show this text to the visitor. -->
+            .
+          <!-- Finish this span element. -->
+          </span>
+        <!-- Finish this a element. -->
+        </a>
+        <!-- Let Bootstrap toggle the mobile menu and expose whether it is open. -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- Style this small piece of text without creating a new section. -->
+          <span class="navbar-toggler-icon">
+          <!-- Finish this span element. -->
+          </span>
+        <!-- Finish this button element. -->
+        </button>
+        <!-- Give Bootstrap a target for opening and closing the mobile navigation. -->
+        <div class="collapse navbar-collapse" id="main-navigation">
+          <!-- Group related items in an unordered list. -->
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <!-- Keep this link or point as one item in its parent list. -->
+            <li class="nav-item">
+              <!-- Mark this navigation link as the page currently being viewed. -->
+              <a class="nav-link" href="index.html" aria-current="page">
+                <!-- Show this text to the visitor. -->
+                Home
+              <!-- Finish this a element. -->
+              </a>
+            <!-- Finish this list item. -->
+            </li>
+            <!-- Keep this link or point as one item in its parent list. -->
+            <li class="nav-item">
+              <!-- Provide a real hyperlink so visitors can reach the linked page or section. -->
+              <a class="nav-link" href="activities/index.html">
+                <!-- Show this text to the visitor. -->
+                Our activities
+              <!-- Finish this a element. -->
+              </a>
+            <!-- Finish this list item. -->
+            </li>
+            <!-- Keep this link or point as one item in its parent list. -->
+            <li class="nav-item">
+              <!-- Provide a real hyperlink so visitors can reach the linked page or section. -->
+              <a class="nav-link" href="#our-purpose">
+                <!-- Show this text to the visitor. -->
+                Our purpose
+              <!-- Finish this a element. -->
+              </a>
+            <!-- Finish this list item. -->
+            </li>
+            <!-- Keep this link or point as one item in its parent list. -->
+            <li class="nav-item">
+              <!-- Provide a real hyperlink so visitors can reach the linked page or section. -->
+              <a class="btn btn-forest nav-join" href="join/index.html">
+                <!-- Show this text to the visitor. -->
+                Join the club
+                <!-- Show a decorative symbol without making a screen reader announce it. -->
+                <span class="ms-2" aria-hidden="true">
+                  <!-- Show this text to the visitor. -->
+                  ↗
+                <!-- Finish this span element. -->
+                </span>
+              <!-- Finish this a element. -->
+              </a>
+            <!-- Finish this list item. -->
+            </li>
+          <!-- Finish this list. -->
+          </ul>
+        <!-- Finish this layout group. -->
         </div>
-      </div>
-      <span class="hero-note">Less footprint. More possibility.</span>
-    </section>
-    <!-- These are club goals, rather than made-up achievement numbers. -->
-    <div class="focus-strip">
-      <div class="container">
-        <div class="row g-0">
-          <div class="col-4 focus-item"><span aria-hidden="true">01</span> Protect our nature</div>
-          <div class="col-4 focus-item"><span aria-hidden="true">02</span> Rethink our habits</div>
-          <div class="col-4 focus-item"><span aria-hidden="true">03</span> Grow together</div>
-        </div>
-      </div>
-    </div>
-    <!-- The story section explains why visitors might want to become involved. -->
-    <section class="section-space" id="our-purpose" aria-labelledby="purpose-title">
-      <div class="container">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-6">
-            <img class="story-photo" src="assets/images/planting.jpg"
-              alt="A hand trowel, pruning scissors, and pots on a gardening table" width="1000" height="667"
-              loading="lazy">
-            <div class="photo-caption"><span>A little care goes a long way.</span><span>ROOTED IN ACTION</span></div>
+      <!-- Finish this set of navigation links. -->
+      </nav>
+    <!-- Finish the site header. -->
+    </header>
+    <!-- Mark the main content and provide a destination for the skip link. -->
+    <main id="main-content">
+      <!-- Group a distinct part of the page under its own heading. -->
+      <section class="hero" aria-labelledby="hero-title">
+        <!-- Show a local image with a text description and dimensions to keep the layout stable. -->
+        <img class="hero-photo" src="assets/images/forest.jpg" alt="Sunlight falling through a lush green forest" width="1920" height="1280" fetchpriority="high">
+        <!-- Keep the content centred with a readable maximum width and side padding. -->
+        <div class="container hero-content">
+          <!-- Show a short label above the main heading for this section. -->
+          <span class="eyebrow">
+            <!-- Show this text to the visitor. -->
+            A student club. A shared planet.
+          <!-- Finish this span element. -->
+          </span>
+          <!-- Give this page its main heading. -->
+          <h1 id="hero-title">
+            <!-- Show this text to the visitor. -->
+            Small steps.
+            <!-- Start a new line without starting a separate paragraph. -->
+            <br>
+            <!-- Show this text to the visitor. -->
+            A
+            <!-- Give this word emphasis while keeping the heading as readable text. -->
+            <em>
+              <!-- Show this text to the visitor. -->
+              greener
+            <!-- Finish this em element. -->
+            </em>
+            <!-- Show this text to the visitor. -->
+            tomorrow.
+          <!-- Finish this h1 element. -->
+          </h1>
+          <!-- Present a readable paragraph of supporting information. -->
+          <p class="hero-description">
+            <!-- Show this text to the visitor. -->
+            Big change starts with people who care. Find your community, get outside, and turn good intentions into everyday action.
+          <!-- Finish this p element. -->
+          </p>
+          <!-- Group related content so the CSS layout and spacing can be applied together. -->
+          <div class="d-flex flex-wrap align-items-center gap-3">
+            <!-- Provide a real hyperlink so visitors can reach the linked page or section. -->
+            <a class="btn btn-lime" href="join/index.html">
+              <!-- Show this text to the visitor. -->
+              Take your first step
+              <!-- Show a decorative symbol without making a screen reader announce it. -->
+              <span class="ms-3 arrow" aria-hidden="true">
+                <!-- Show this text to the visitor. -->
+                ↗
+              <!-- Finish this span element. -->
+              </span>
+            <!-- Finish this a element. -->
+            </a>
+            <!-- Provide a real hyperlink so visitors can reach the linked page or section. -->
+            <a class="hero-secondary" href="activities/index.html">
+              <!-- Show this text to the visitor. -->
+              Explore our activities
+              <!-- Show a decorative symbol without making a screen reader announce it. -->
+              <span class="ms-2" aria-hidden="true">
+                <!-- Show this text to the visitor. -->
+                →
+              <!-- Finish this span element. -->
+              </span>
+            <!-- Finish this a element. -->
+            </a>
+          <!-- Finish this layout group. -->
           </div>
-          <div class="col-lg-5 offset-lg-1">
-            <span class="eyebrow">Why GreenSteps?</span>
-            <h2 class="section-title" id="purpose-title">A better planet.<br>A place to belong.</h2>
-            <p class="text-soft mt-4">You do not need to be an expert to make a difference. GreenSteps brings students
-              together to learn, lend a hand, and build habits that last.</p>
-            <div class="principle"><span class="principle-number">01</span>
-              <div>
-                <h3>Learn by doing</h3>
-                <p>Get involved in practical activities, from sorting waste to caring for plants.</p>
-              </div>
-            </div>
-            <div class="principle"><span class="principle-number">02</span>
-              <div>
-                <h3>Make meaningful connections</h3>
-                <p>Meet people who share your curiosity and care for the world around them.</p>
-              </div>
-            </div>
-            <div class="principle"><span class="principle-number">03</span>
-              <div>
-                <h3>Start small, stay curious</h3>
-                <p>Choose one manageable action. Build on it, together.</p>
-              </div>
-            </div>
-            <a class="text-link mt-4" href="join/index.html">Find your place with us <span class="arrow"
-                aria-hidden="true">↗</span></a>
-          </div>
+        <!-- Finish this layout group. -->
         </div>
+        <!-- Style this small piece of text without creating a new section. -->
+        <span class="hero-note">
+          <!-- Show this text to the visitor. -->
+          Less footprint. More possibility.
+        <!-- Finish this span element. -->
+        </span>
+      <!-- Finish this section of related content. -->
+      </section>
+      <!-- Group related content so the CSS layout and spacing can be applied together. -->
+      <div class="focus-strip">
+        <!-- Keep the content centred with a readable maximum width and side padding. -->
+        <div class="container">
+          <!-- Arrange the next columns in a Bootstrap row with the chosen spacing. -->
+          <div class="row g-0">
+            <!-- Set this content's column width at the chosen screen sizes. -->
+            <div class="col-4 focus-item">
+              <!-- Show a decorative symbol without making a screen reader announce it. -->
+              <span aria-hidden="true">
+                <!-- Show this text to the visitor. -->
+                01
+              <!-- Finish this span element. -->
+              </span>
+              <!-- Show this text to the visitor. -->
+              Protect our nature
+            <!-- Finish this layout group. -->
+            </div>
+            <!-- Set this content's column width at the chosen screen sizes. -->
+            <div class="col-4 focus-item">
+              <!-- Show a decorative symbol without making a screen reader announce it. -->
+              <span aria-hidden="true">
+                <!-- Show this text to the visitor. -->
+                02
+              <!-- Finish this span element. -->
+              </span>
+              <!-- Show this text to the visitor. -->
+              Rethink our habits
+            <!-- Finish this layout group. -->
+            </div>
+            <!-- Set this content's column width at the chosen screen sizes. -->
+            <div class="col-4 focus-item">
+              <!-- Show a decorative symbol without making a screen reader announce it. -->
+              <span aria-hidden="true">
+                <!-- Show this text to the visitor. -->
+                03
+              <!-- Finish this span element. -->
+              </span>
+              <!-- Show this text to the visitor. -->
+              Grow together
+            <!-- Finish this layout group. -->
+            </div>
+          <!-- Finish this layout group. -->
+          </div>
+        <!-- Finish this layout group. -->
+        </div>
+      <!-- Finish this layout group. -->
       </div>
-    </section>
-    <!-- Each preview links to a full page, so the website stays useful without JavaScript. -->
-    <section class="section-space activities-section" aria-labelledby="activities-title">
-      <div class="container">
-        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
-          <div><span class="eyebrow">Good things happen together</span>
-            <h2 class="section-title mb-0" id="activities-title">Less scrolling. More doing.</h2>
+      <!-- Group a distinct part of the page under its own heading. -->
+      <section class="section-space" id="our-purpose" aria-labelledby="purpose-title">
+        <!-- Keep the content centred with a readable maximum width and side padding. -->
+        <div class="container">
+          <!-- Arrange the next columns in a Bootstrap row with the chosen spacing. -->
+          <div class="row align-items-center g-5">
+            <!-- Set this content's column width at the chosen screen sizes. -->
+            <div class="col-lg-6">
+              <!-- Show a local image with a text description and dimensions to keep the layout stable. -->
+              <img class="story-photo" src="assets/images/planting.jpg" alt="A hand trowel, pruning scissors, and pots on a gardening table" width="1000" height="667" loading="lazy">
+              <!-- Group related content so the CSS layout and spacing can be applied together. -->
+              <div class="photo-caption">
+                <!-- Style this small piece of text without creating a new section. -->
+                <span>
+                  <!-- Show this text to the visitor. -->
+                  A little care goes a long way.
+                <!-- Finish this span element. -->
+                </span>
+                <!-- Style this small piece of text without creating a new section. -->
+                <span>
+                  <!-- Show this text to the visitor. -->
+                  ROOTED IN ACTION
+                <!-- Finish this span element. -->
+                </span>
+              <!-- Finish this layout group. -->
+              </div>
+            <!-- Finish this layout group. -->
+            </div>
+            <!-- Set this content's column width at the chosen screen sizes. -->
+            <div class="col-lg-5 offset-lg-1">
+              <!-- Show a short label above the main heading for this section. -->
+              <span class="eyebrow">
+                <!-- Show this text to the visitor. -->
+                Why GreenSteps?
+              <!-- Finish this span element. -->
+              </span>
+              <!-- Introduce this section with a heading that keeps the page structure clear. -->
+              <h2 class="section-title" id="purpose-title">
+                <!-- Show this text to the visitor. -->
+                A better planet.
+                <!-- Start a new line without starting a separate paragraph. -->
+                <br>
+                <!-- Show this text to the visitor. -->
+                A place to belong.
+              <!-- Finish this h2 element. -->
+              </h2>
+              <!-- Present a readable paragraph of supporting information. -->
+              <p class="text-soft mt-4">
+                <!-- Show this text to the visitor. -->
+                You do not need to be an expert to make a difference. GreenSteps brings students together to learn, lend a hand, and build habits that last.
+              <!-- Finish this p element. -->
+              </p>
+              <!-- Group related content so the CSS layout and spacing can be applied together. -->
+              <div class="principle">
+                <!-- Style this small piece of text without creating a new section. -->
+                <span class="principle-number">
+                  <!-- Show this text to the visitor. -->
+                  01
+                <!-- Finish this span element. -->
+                </span>
+                <!-- Group related content so the CSS layout and spacing can be applied together. -->
+                <div>
+                  <!-- Introduce this section with a heading that keeps the page structure clear. -->
+                  <h3>
+                    <!-- Show this text to the visitor. -->
+                    Learn by doing
+                  <!-- Finish this h3 element. -->
+                  </h3>
+                  <!-- Present a readable paragraph of supporting information. -->
+                  <p>
+                    <!-- Show this text to the visitor. -->
+                    Get involved in practical activities, from sorting waste to caring for plants.
+                  <!-- Finish this p element. -->
+                  </p>
+                <!-- Finish this layout group. -->
+                </div>
+              <!-- Finish this layout group. -->
+              </div>
+              <!-- Group related content so the CSS layout and spacing can be applied together. -->
+              <div class="principle">
+                <!-- Style this small piece of text without creating a new section. -->
+                <span class="principle-number">
+                  <!-- Show this text to the visitor. -->
+                  02
+                <!-- Finish this span element. -->
+                </span>
+                <!-- Group related content so the CSS layout and spacing can be applied together. -->
+                <div>
+                  <!-- Introduce this section with a heading that keeps the page structure clear. -->
+                  <h3>
+                    <!-- Show this text to the visitor. -->
+                    Make meaningful connections
+                  <!-- Finish this h3 element. -->
+                  </h3>
+                  <!-- Present a readable paragraph of supporting information. -->
+                  <p>
+                    <!-- Show this text to the visitor. -->
+                    Meet people who share your curiosity and care for the world around them.
+                  <!-- Finish this p element. -->
+                  </p>
+                <!-- Finish this layout group. -->
+                </div>
+              <!-- Finish this layout group. -->
+              </div>
+              <!-- Group related content so the CSS layout and spacing can be applied together. -->
+              <div class="principle">
+                <!-- Style this small piece of text without creating a new section. -->
+                <span class="principle-number">
+                  <!-- Show this text to the visitor. -->
+                  03
+                <!-- Finish this span element. -->
+                </span>
+                <!-- Group related content so the CSS layout and spacing can be applied together. -->
+                <div>
+                  <!-- Introduce this section with a heading that keeps the page structure clear. -->
+                  <h3>
+                    <!-- Show this text to the visitor. -->
+                    Start small, stay curious
+                  <!-- Finish this h3 element. -->
+                  </h3>
+                  <!-- Present a readable paragraph of supporting information. -->
+                  <p>
+                    <!-- Show this text to the visitor. -->
+                    Choose one manageable action. Build on it, together.
+                  <!-- Finish this p element. -->
+                  </p>
+                <!-- Finish this layout group. -->
+                </div>
+              <!-- Finish this layout group. -->
+              </div>
+              <!-- Provide a real hyperlink so visitors can reach the linked page or section. -->
+              <a class="text-link mt-4" href="join/index.html">
+                <!-- Show this text to the visitor. -->
+                Find your place with us
+                <!-- Show a decorative symbol without making a screen reader announce it. -->
+                <span class="arrow" aria-hidden="true">
+                  <!-- Show this text to the visitor. -->
+                  ↗
+                <!-- Finish this span element. -->
+                </span>
+              <!-- Finish this a element. -->
+              </a>
+            <!-- Finish this layout group. -->
+            </div>
+          <!-- Finish this layout group. -->
           </div>
-          <a class="text-link mb-2" href="activities/index.html">Explore all activities <span class="arrow"
-              aria-hidden="true">↗</span></a>
+        <!-- Finish this layout group. -->
         </div>
-        <p class="demo-label mb-4">Explore our sample club programme. Activities shown are demonstrations, not scheduled
-          events.</p>
+      <!-- Finish this section of related content. -->
+      </section>
+      <!-- Group a distinct part of the page under its own heading. -->
+      <section class="section-space activities-section" aria-labelledby="activities-title">
+        <!-- Keep the content centred with a readable maximum width and side padding. -->
+        <div class="container">
+          <!-- Group related content so the CSS layout and spacing can be applied together. -->
+          <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+            <!-- Group related content so the CSS layout and spacing can be applied together. -->
+            <div>
+              <!-- Show a short label above the main heading for this section. -->
+              <span class="eyebrow">
+                <!-- Show this text to the visitor. -->
+                Good things happen together
+              <!-- Finish this span element. -->
+              </span>
+              <!-- Introduce this section with a heading that keeps the page structure clear. -->
+              <h2 class="section-title mb-0" id="activities-title">
+                <!-- Show this text to the visitor. -->
+                Less scrolling. More doing.
+              <!-- Finish this h2 element. -->
+              </h2>
+            <!-- Finish this layout group. -->
+            </div>
+            <!-- Provide a real hyperlink so visitors can reach the linked page or section. -->
+            <a class="text-link mb-2" href="activities/index.html">
+              <!-- Show this text to the visitor. -->
+              Explore all activities
+              <!-- Show a decorative symbol without making a screen reader announce it. -->
+              <span class="arrow" aria-hidden="true">
+                <!-- Show this text to the visitor. -->
+                ↗
+              <!-- Finish this span element. -->
+              </span>
+            <!-- Finish this a element. -->
+            </a>
+          <!-- Finish this layout group. -->
+          </div>
+          <!-- Explain that this website and its activities are a classroom demonstration. -->
+          <p class="demo-label mb-4">
+            <!-- Show this text to the visitor. -->
+            Explore our sample club programme. Activities shown are demonstrations, not scheduled events.
+          <!-- Finish this p element. -->
+          </p>
+          <!-- Arrange the next columns in a Bootstrap row with the chosen spacing. -->
+          <div class="row g-4">
+            <!-- Set this content's column width at the chosen screen sizes. -->
+            <div class="col-md-4">
+              <!-- Keep this activity description together as a self-contained card. -->
+              <article class="card activity-card">
+                <!-- Show a local image with a text description and dimensions to keep the layout stable. -->
+                <img class="activity-image" src="assets/images/coast.jpg" alt="A sandy beach beside clear blue water" width="1000" height="667" loading="lazy">
+                <!-- Group related content so the CSS layout and spacing can be applied together. -->
+                <div class="card-body">
+                  <!-- Style this small piece of text without creating a new section. -->
+                  <span class="activity-category">
+                    <!-- Show this text to the visitor. -->
+                    Conservation · Outdoors
+                  <!-- Finish this span element. -->
+                  </span>
+                  <!-- Introduce this section with a heading that keeps the page structure clear. -->
+                  <h3>
+                    <!-- Show this text to the visitor. -->
+                    A cleaner coastline
+                  <!-- Finish this h3 element. -->
+                  </h3>
+                  <!-- Present a readable paragraph of supporting information. -->
+                  <p>
+                    <!-- Show this text to the visitor. -->
+                    Give the shore some love. Learn to collect litter responsibly and understand what washes up.
+                  <!-- Finish this p element. -->
+                  </p>
+                  <!-- Provide a real hyperlink so visitors can reach the linked page or section. -->
+                  <a class="text-link" href="activities/index.html#coastline">
+                    <!-- Show this text to the visitor. -->
+                    Meet the cleanup crew
+                    <!-- Show a decorative symbol without making a screen reader announce it. -->
+                    <span class="arrow" aria-hidden="true">
+                      <!-- Show this text to the visitor. -->
+                      ↗
+                    <!-- Finish this span element. -->
+                    </span>
+                  <!-- Finish this a element. -->
+                  </a>
+                <!-- Finish this layout group. -->
+                </div>
+              <!-- Finish this activity card. -->
+              </article>
+            <!-- Finish this layout group. -->
+            </div>
+            <!-- Set this content's column width at the chosen screen sizes. -->
+            <div class="col-md-4">
+              <!-- Keep this activity description together as a self-contained card. -->
+              <article class="card activity-card">
+                <!-- Show a local image with a text description and dimensions to keep the layout stable. -->
+                <img class="activity-image" src="assets/images/planting.jpg" alt="Gardening tools and potting soil ready for a planting session" width="1000" height="667" loading="lazy">
+                <!-- Group related content so the CSS layout and spacing can be applied together. -->
+                <div class="card-body">
+                  <!-- Style this small piece of text without creating a new section. -->
+                  <span class="activity-category">
+                    <!-- Show this text to the visitor. -->
+                    Biodiversity · Hands-on
+                  <!-- Finish this span element. -->
+                  </span>
+                  <!-- Introduce this section with a heading that keeps the page structure clear. -->
+                  <h3>
+                    <!-- Show this text to the visitor. -->
+                    Room to grow
+                  <!-- Finish this h3 element. -->
+                  </h3>
+                  <!-- Present a readable paragraph of supporting information. -->
+                  <p>
+                    <!-- Show this text to the visitor. -->
+                    Get your hands in the soil and discover how thoughtful planting supports a greener space.
+                  <!-- Finish this p element. -->
+                  </p>
+                  <!-- Provide a real hyperlink so visitors can reach the linked page or section. -->
+                  <a class="text-link" href="activities/index.html#planting">
+                    <!-- Show this text to the visitor. -->
+                    Grow something good
+                    <!-- Show a decorative symbol without making a screen reader announce it. -->
+                    <span class="arrow" aria-hidden="true">
+                      <!-- Show this text to the visitor. -->
+                      ↗
+                    <!-- Finish this span element. -->
+                    </span>
+                  <!-- Finish this a element. -->
+                  </a>
+                <!-- Finish this layout group. -->
+                </div>
+              <!-- Finish this activity card. -->
+              </article>
+            <!-- Finish this layout group. -->
+            </div>
+            <!-- Set this content's column width at the chosen screen sizes. -->
+            <div class="col-md-4">
+              <!-- Keep this activity description together as a self-contained card. -->
+              <article class="card activity-card">
+                <!-- Show a local image with a text description and dimensions to keep the layout stable. -->
+                <img class="activity-image" src="assets/images/circular.svg" alt="Illustration of a reusable bottle, a storage jar, and a potted plant" width="800" height="500" loading="lazy">
+                <!-- Group related content so the CSS layout and spacing can be applied together. -->
+                <div class="card-body">
+                  <!-- Style this small piece of text without creating a new section. -->
+                  <span class="activity-category">
+                    <!-- Show this text to the visitor. -->
+                    Everyday action · Workshop
+                  <!-- Finish this span element. -->
+                  </span>
+                  <!-- Introduce this section with a heading that keeps the page structure clear. -->
+                  <h3>
+                    <!-- Show this text to the visitor. -->
+                    Waste less. Live more.
+                  <!-- Finish this h3 element. -->
+                  </h3>
+                  <!-- Present a readable paragraph of supporting information. -->
+                  <p>
+                    <!-- Show this text to the visitor. -->
+                    Try simple swaps, explore reuse, and make sense of recycling in everyday student life.
+                  <!-- Finish this p element. -->
+                  </p>
+                  <!-- Provide a real hyperlink so visitors can reach the linked page or section. -->
+                  <a class="text-link" href="activities/index.html#workshop">
+                    <!-- Show this text to the visitor. -->
+                    Rethink the everyday
+                    <!-- Show a decorative symbol without making a screen reader announce it. -->
+                    <span class="arrow" aria-hidden="true">
+                      <!-- Show this text to the visitor. -->
+                      ↗
+                    <!-- Finish this span element. -->
+                    </span>
+                  <!-- Finish this a element. -->
+                  </a>
+                <!-- Finish this layout group. -->
+                </div>
+              <!-- Finish this activity card. -->
+              </article>
+            <!-- Finish this layout group. -->
+            </div>
+          <!-- Finish this layout group. -->
+          </div>
+        <!-- Finish this layout group. -->
+        </div>
+      <!-- Finish this section of related content. -->
+      </section>
+      <!-- Group a distinct part of the page under its own heading. -->
+      <section class="section-space invitation" aria-labelledby="invite-title">
+        <!-- Keep the content centred with a readable maximum width and side padding. -->
+        <div class="container">
+          <!-- Arrange the next columns in a Bootstrap row with the chosen spacing. -->
+          <div class="row align-items-center g-4">
+            <!-- Set this content's column width at the chosen screen sizes. -->
+            <div class="col-lg-8">
+              <!-- Show a short label above the main heading for this section. -->
+              <span class="eyebrow">
+                <!-- Show this text to the visitor. -->
+                Your next chapter starts here
+              <!-- Finish this span element. -->
+              </span>
+              <!-- Introduce this section with a heading that keeps the page structure clear. -->
+              <h2 class="section-title" id="invite-title">
+                <!-- Show this text to the visitor. -->
+                The future looks greener
+                <!-- Start a new line without starting a separate paragraph. -->
+                <br>
+                <!-- Show this text to the visitor. -->
+                with you in it.
+              <!-- Finish this h2 element. -->
+              </h2>
+              <!-- Present a readable paragraph of supporting information. -->
+              <p class="mt-3 mb-0">
+                <!-- Show this text to the visitor. -->
+                A little time. An open mind. That is all you need to take the first step.
+              <!-- Finish this p element. -->
+              </p>
+            <!-- Finish this layout group. -->
+            </div>
+            <!-- Set this content's column width at the chosen screen sizes. -->
+            <div class="col-lg-4 text-lg-end">
+              <!-- Provide a real hyperlink so visitors can reach the linked page or section. -->
+              <a class="btn btn-lime" href="join/index.html">
+                <!-- Show this text to the visitor. -->
+                Become a GreenStepper
+                <!-- Show a decorative symbol without making a screen reader announce it. -->
+                <span class="ms-3 arrow" aria-hidden="true">
+                  <!-- Show this text to the visitor. -->
+                  ↗
+                <!-- Finish this span element. -->
+                </span>
+              <!-- Finish this a element. -->
+              </a>
+            <!-- Finish this layout group. -->
+            </div>
+          <!-- Finish this layout group. -->
+          </div>
+        <!-- Finish this layout group. -->
+        </div>
+      <!-- Finish this section of related content. -->
+      </section>
+    <!-- Finish the main page content. -->
+    </main>
+    <!-- Group the page links, outside resources, and project notice at the bottom. -->
+    <footer class="site-footer">
+      <!-- Keep the content centred with a readable maximum width and side padding. -->
+      <div class="container">
+        <!-- Arrange the next columns in a Bootstrap row with the chosen spacing. -->
         <div class="row g-4">
-          <div class="col-md-4">
-            <article class="card activity-card">
-              <img class="activity-image" src="assets/images/coast.jpg" alt="A sandy beach beside clear blue water"
-                width="1000" height="667" loading="lazy">
-              <div class="card-body"><span class="activity-category">Conservation · Outdoors</span>
-                <h3>A cleaner coastline</h3>
-                <p>Give the shore some love. Learn to collect litter responsibly and understand what washes up.</p><a
-                  class="text-link" href="activities/index.html#coastline">Meet the cleanup crew <span class="arrow"
-                    aria-hidden="true">↗</span></a>
-              </div>
-            </article>
+          <!-- Set this content's column width at the chosen screen sizes. -->
+          <div class="col-lg-6">
+            <!-- Make the club logo a link back to the home page. -->
+            <a class="navbar-brand" href="index.html">
+              <!-- Show a decorative logo without making screen readers repeat nearby text. -->
+              <img class="brand-icon" src="assets/images/leaf.svg" alt="" width="30" height="34">
+              <!-- Show this text to the visitor. -->
+              greensteps.
+            <!-- Finish this a element. -->
+            </a>
+            <!-- Present a readable paragraph of supporting information. -->
+            <p class="footer-copy">
+              <!-- Show this text to the visitor. -->
+              Small actions. Shared purpose.
+              <!-- Start a new line without starting a separate paragraph. -->
+              <br>
+              <!-- Show this text to the visitor. -->
+              A student community for a greener tomorrow.
+            <!-- Finish this p element. -->
+            </p>
+          <!-- Finish this layout group. -->
           </div>
-          <div class="col-md-4">
-            <article class="card activity-card">
-              <img class="activity-image" src="assets/images/planting.jpg"
-                alt="Gardening tools and potting soil ready for a planting session" width="1000" height="667"
-                loading="lazy">
-              <div class="card-body"><span class="activity-category">Biodiversity · Hands-on</span>
-                <h3>Room to grow</h3>
-                <p>Get your hands in the soil and discover how thoughtful planting supports a greener space.</p><a
-                  class="text-link" href="activities/index.html#planting">Grow something good <span class="arrow"
-                    aria-hidden="true">↗</span></a>
-              </div>
-            </article>
+          <!-- Set this content's column width at the chosen screen sizes. -->
+          <div class="col-6 col-lg-3">
+            <!-- Introduce this section with a heading that keeps the page structure clear. -->
+            <h2 class="footer-heading">
+              <!-- Show this text to the visitor. -->
+              Find your way
+            <!-- Finish this h2 element. -->
+            </h2>
+            <!-- Group related items in an unordered list. -->
+            <ul class="footer-links">
+              <!-- Keep this link or point as one item in its parent list. -->
+              <li>
+                <!-- Provide a real hyperlink so visitors can reach the linked page or section. -->
+                <a href="index.html">
+                  <!-- Show this text to the visitor. -->
+                  Home
+                <!-- Finish this a element. -->
+                </a>
+              <!-- Finish this list item. -->
+              </li>
+              <!-- Keep this link or point as one item in its parent list. -->
+              <li>
+                <!-- Provide a real hyperlink so visitors can reach the linked page or section. -->
+                <a href="activities/index.html">
+                  <!-- Show this text to the visitor. -->
+                  Our activities
+                <!-- Finish this a element. -->
+                </a>
+              <!-- Finish this list item. -->
+              </li>
+              <!-- Keep this link or point as one item in its parent list. -->
+              <li>
+                <!-- Provide a real hyperlink so visitors can reach the linked page or section. -->
+                <a href="join/index.html">
+                  <!-- Show this text to the visitor. -->
+                  Join the club
+                <!-- Finish this a element. -->
+                </a>
+              <!-- Finish this list item. -->
+              </li>
+            <!-- Finish this list. -->
+            </ul>
+          <!-- Finish this layout group. -->
           </div>
-          <div class="col-md-4">
-            <article class="card activity-card">
-              <img class="activity-image" src="assets/images/circular.svg"
-                alt="Illustration of a reusable bottle, a storage jar, and a potted plant" width="800" height="500"
-                loading="lazy">
-              <div class="card-body"><span class="activity-category">Everyday action · Workshop</span>
-                <h3>Waste less. Live more.</h3>
-                <p>Try simple swaps, explore reuse, and make sense of recycling in everyday student life.</p><a
-                  class="text-link" href="activities/index.html#workshop">Rethink the everyday <span class="arrow"
-                    aria-hidden="true">↗</span></a>
-              </div>
-            </article>
+          <!-- Set this content's column width at the chosen screen sizes. -->
+          <div class="col-6 col-lg-3">
+            <!-- Introduce this section with a heading that keeps the page structure clear. -->
+            <h2 class="footer-heading">
+              <!-- Show this text to the visitor. -->
+              Keep exploring
+            <!-- Finish this h2 element. -->
+            </h2>
+            <!-- Group related items in an unordered list. -->
+            <ul class="footer-links">
+              <!-- Keep this link or point as one item in its parent list. -->
+              <li>
+                <!-- Open this outside resource in a new tab without giving it access to this tab. -->
+                <a href="https://www.unep.org/" target="_blank" rel="noopener noreferrer">
+                  <!-- Show this text to the visitor. -->
+                  UN Environment Programme ↗
+                  <!-- Give screen readers extra context without changing the visible layout. -->
+                  <span class="visually-hidden">
+                    <!-- Show this text to the visitor. -->
+                    (opens in a new tab)
+                  <!-- Finish this span element. -->
+                  </span>
+                <!-- Finish this a element. -->
+                </a>
+              <!-- Finish this list item. -->
+              </li>
+              <!-- Keep this link or point as one item in its parent list. -->
+              <li>
+                <!-- Open this outside resource in a new tab without giving it access to this tab. -->
+                <a href="https://www.worldwildlife.org/" target="_blank" rel="noopener noreferrer">
+                  <!-- Show this text to the visitor. -->
+                  World Wildlife Fund ↗
+                  <!-- Give screen readers extra context without changing the visible layout. -->
+                  <span class="visually-hidden">
+                    <!-- Show this text to the visitor. -->
+                    (opens in a new tab)
+                  <!-- Finish this span element. -->
+                  </span>
+                <!-- Finish this a element. -->
+                </a>
+              <!-- Finish this list item. -->
+              </li>
+              <!-- Keep this link or point as one item in its parent list. -->
+              <li>
+                <!-- Provide a real hyperlink so visitors can reach the linked page or section. -->
+                <a href="CREDITS.md">
+                  <!-- Show this text to the visitor. -->
+                  Image &amp; library credits
+                <!-- Finish this a element. -->
+                </a>
+              <!-- Finish this list item. -->
+              </li>
+            <!-- Finish this list. -->
+            </ul>
+          <!-- Finish this layout group. -->
           </div>
+        <!-- Finish this layout group. -->
         </div>
+        <!-- Group related content so the CSS layout and spacing can be applied together. -->
+        <div class="footer-bottom">
+          <!-- Style this small piece of text without creating a new section. -->
+          <span>
+            <!-- Show this text to the visitor. -->
+            © 2026 GreenSteps · A fictional club for an educational project.
+          <!-- Finish this span element. -->
+          </span>
+          <!-- Style this small piece of text without creating a new section. -->
+          <span>
+            <!-- Show this text to the visitor. -->
+            Made with care for our shared home.
+          <!-- Finish this span element. -->
+          </span>
+        <!-- Finish this layout group. -->
+        </div>
+      <!-- Finish this layout group. -->
       </div>
-    </section>
-    <section class="section-space invitation" aria-labelledby="invite-title">
-      <div class="container">
-        <div class="row align-items-center g-4">
-          <div class="col-lg-8"><span class="eyebrow">Your next chapter starts here</span>
-            <h2 class="section-title" id="invite-title">The future looks greener<br>with you in it.</h2>
-            <p class="mt-3 mb-0">A little time. An open mind. That is all you need to take the first step.</p>
-          </div>
-          <div class="col-lg-4 text-lg-end"><a class="btn btn-lime" href="join/index.html">Become a GreenStepper <span
-                class="ms-3 arrow" aria-hidden="true">↗</span></a></div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <!-- Outside links connect the visitor to established environmental resources. -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-6"><a class="navbar-brand" href="index.html"><img class="brand-icon"
-              src="assets/images/leaf.svg" alt="" width="30" height="34">greensteps.</a>
-          <p class="footer-copy">Small actions. Shared purpose.<br>A student community for a greener tomorrow.</p>
-        </div>
-        <div class="col-6 col-lg-3">
-          <h2 class="footer-heading">Find your way</h2>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="activities/index.html">Our activities</a></li>
-            <li><a href="join/index.html">Join the club</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-3">
-          <h2 class="footer-heading">Keep exploring</h2>
-          <ul class="footer-links">
-            <li><a href="https://www.unep.org/" target="_blank" rel="noopener noreferrer">UN Environment Programme ↗
-                <span class="visually-hidden">(opens in a new tab)</span></a></li>
-            <li><a href="https://www.worldwildlife.org/" target="_blank" rel="noopener noreferrer">World Wildlife Fund ↗
-                <span class="visually-hidden">(opens in a new tab)</span></a></li>
-            <li><a href="CREDITS.md">Image &amp; library credits</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom"><span>© 2026 GreenSteps · A fictional club for an educational project.</span><span>Made
-          with care for our shared home.</span></div>
-    </div>
-  </footer>
-</body>
-
+    <!-- Finish the site footer. -->
+    </footer>
+  <!-- Finish the visible page. -->
+  </body>
+<!-- Finish the HTML document. -->
 </html>

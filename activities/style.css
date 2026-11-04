@@ -1,85 +1,150 @@
-/* Filter buttons expose their selection visually and through aria-pressed in HTML. */
+/* Apply the following styles to the elements matched by this selector. */
 .filter-bar {
+    /* Choose how this element participates in the page layout. */
     display: flex;
+    /* Allow layout items to move onto another line when space is limited. */
     flex-wrap: wrap;
+    /* Leave this much space between neighbouring layout items. */
     gap: .65rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .filter-button {
+    /* Set the border width, style, and colour together. */
     border: 1px solid #c5d0bd;
+    /* Set the background colour or image behind this element. */
     background: transparent;
+    /* Set the text colour for this element. */
     color: var(--forest);
+    /* Round these corners using the chosen sizes. */
     border-radius: 30px;
+    /* Set the space between the content and its border. */
     padding: .6rem 1.1rem;
+    /* Set the text size; clamp values let it scale between readable limits. */
     font-size: .8rem;
+    /* Animate supported style changes, such as hover effects. */
     transition: background-color .2s ease;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .filter-button:hover {
+    /* Set the background colour or image behind this element. */
     background: #e6edda;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .filter-button[aria-pressed="true"] {
+    /* Set the background colour or image behind this element. */
     background: var(--forest);
+    /* Choose the colour of this element's border. */
     border-color: var(--forest);
+    /* Set the text colour for this element. */
     color: #fff;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .filter-button:disabled {
+    /* Set how transparent the element appears. */
     opacity: .65;
+/* Finish this style rule or condition. */
 }
 
-/* The hidden attribute must win over Bootstrap display utilities when filtering. */
+/* Apply the following styles to the elements matched by this selector. */
 [data-activity][hidden] {
+    /* Choose how this element participates in the page layout. */
     display: none !important;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .results-count {
+    /* Set the text colour for this element. */
     color: var(--muted);
+    /* Set the text size; clamp values let it scale between readable limits. */
     font-size: .8rem;
+    /* Add space below this element. */
     margin-bottom: 0;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .activity-card ul {
+    /* Set the text colour for this element. */
     color: var(--muted);
+    /* Set the text size; clamp values let it scale between readable limits. */
     font-size: .85rem;
+    /* Add space on the left inside this element. */
     padding-left: 1.1rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .activity-card .btn {
+    /* Set the width available to this element. */
     width: 100%;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .activity-image {
+    /* Set the height of this element. */
     height: 250px;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .activity-grid {
+    /* Leave space above this element when it becomes a scroll target. */
     scroll-margin-top: 2rem;
+/* Finish this style rule or condition. */
 }
 
-/* Short preparation notes remain readable in a balanced responsive layout. */
+/* Apply the following styles to the elements matched by this selector. */
 .preparation {
+    /* Set the background colour or image behind this element. */
     background: #edf0e6;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .preparation h3 {
+    /* Set the text size; clamp values let it scale between readable limits. */
     font-size: 1rem;
+    /* Add space above this element. */
     margin-top: 1rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .preparation p {
+    /* Set the text size; clamp values let it scale between readable limits. */
     font-size: .87rem;
+    /* Set the text colour for this element. */
     color: var(--muted);
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .step-marker {
+    /* Set the border width, style, and colour together. */
     border: 1px solid #bdcbb1;
+    /* Round these corners using the chosen sizes. */
     border-radius: 50%;
+    /* Choose how this element participates in the page layout. */
     display: grid;
+    /* Centre or align children along both grid axes. */
     place-items: center;
+    /* Set the width available to this element. */
     width: 36px;
+    /* Set the height of this element. */
     height: 36px;
+    /* Choose the font, followed by fallback fonts if it is unavailable. */
     font-family: Georgia, serif;
+    /* Set the text size; clamp values let it scale between readable limits. */
     font-size: .9rem;
+/* Finish this style rule or condition. */
 }

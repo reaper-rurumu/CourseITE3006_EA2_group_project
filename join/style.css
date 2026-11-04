@@ -1,180 +1,324 @@
-/* The form is a quiet, readable surface beside a visual welcome panel. */
+/* Apply the following styles to the elements matched by this selector. */
 .join-section {
+    /* Set the padding above and below the content. */
     padding-block: 4rem 5rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .join-aside {
+    /* Set the background colour or image behind this element. */
     background: var(--forest);
+    /* Set the text colour for this element. */
     color: #fff;
+    /* Round these corners using the chosen sizes. */
     border-radius: 5px;
+    /* Choose whether content outside this box is clipped or left visible. */
     overflow: hidden;
+    /* Set the height of this element. */
     height: 100%;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .join-aside img {
+    /* Set the width available to this element. */
     width: 100%;
+    /* Set the height of this element. */
     height: 280px;
+    /* Crop the image to fill its box while keeping its original proportions. */
     object-fit: cover;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .join-aside-content {
+    /* Set the space between the content and its border. */
     padding: 2rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .join-aside h2 {
+    /* Choose the font, followed by fallback fonts if it is unavailable. */
     font-family: Georgia, serif;
+    /* Choose how light or bold the text should look. */
     font-weight: 400;
+    /* Set the text size; clamp values let it scale between readable limits. */
     font-size: 2.3rem;
+    /* Set the distance between lines so text stays readable. */
     line-height: 1.12;
+    /* Adjust the space between letters. */
     letter-spacing: -.04em;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .join-aside p,
+/* Apply the following styles to the elements matched by this selector. */
 .join-aside li {
+    /* Set the text size; clamp values let it scale between readable limits. */
     font-size: .85rem;
+    /* Set the text colour for this element. */
     color: #d4dfcf;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .join-aside ul {
+    /* Add space on the left inside this element. */
     padding-left: 1.15rem;
+    /* Add space below this element. */
     margin-bottom: 0;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .join-aside li {
+    /* Add space below the content inside this element. */
     padding-bottom: .7rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .join-aside .eyebrow {
+    /* Set the text colour for this element. */
     color: var(--lime);
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .form-panel {
+    /* Set the border width, style, and colour together. */
     border: 1px solid var(--line);
+    /* Set the background colour or image behind this element. */
     background: #fffef9;
+    /* Round these corners using the chosen sizes. */
     border-radius: 5px;
+    /* Set the space between the content and its border. */
     padding: 2.3rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .form-panel h2 {
+    /* Choose the font, followed by fallback fonts if it is unavailable. */
     font-family: Georgia, serif;
+    /* Set the text size; clamp values let it scale between readable limits. */
     font-size: 2rem;
+    /* Adjust the space between letters. */
     letter-spacing: -.04em;
+/* Finish this style rule or condition. */
 }
 
-/* Bootstrap controls inherit our palette; errors also use text so colour is not the only signal. */
+/* Apply the following styles to the elements matched by this selector. */
 .form-label {
+    /* Set the text size; clamp values let it scale between readable limits. */
     font-size: .83rem;
+    /* Choose how light or bold the text should look. */
     font-weight: 650;
+    /* Add space below this element. */
     margin-bottom: .4rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .form-control,
+/* Apply the following styles to the elements matched by this selector. */
 .form-select {
+    /* Set the colour behind this element. */
     background-color: #fffef9;
+    /* Choose the colour of this element's border. */
     border-color: #c5cdbf;
+    /* Round these corners using the chosen sizes. */
     border-radius: 4px;
+    /* Set the space between the content and its border. */
     padding: .78rem .9rem;
+    /* Set the text size; clamp values let it scale between readable limits. */
     font-size: .9rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .form-select {
+    /* Leave room on the right, such as space for a select arrow. */
     padding-right: 2.5rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .form-control:focus,
+/* Apply the following styles to the elements matched by this selector. */
 .form-select:focus {
+    /* Choose the colour of this element's border. */
     border-color: #658946;
+    /* Add a soft shadow to separate this surface from its background. */
     box-shadow: 0 0 0 .2rem #8ba96526;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .form-control[aria-invalid="true"],
+/* Apply the following styles to the elements matched by this selector. */
 .form-select[aria-invalid="true"] {
+    /* Choose the colour of this element's border. */
     border-color: #9d332e;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .form-text {
+    /* Set the text size; clamp values let it scale between readable limits. */
     font-size: .75rem;
+    /* Set the text colour for this element. */
     color: var(--muted);
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .field-error {
+    /* Set the text colour for this element. */
     color: #9d332e;
+    /* Set the text size; clamp values let it scale between readable limits. */
     font-size: .78rem;
+    /* Add space above this element. */
     margin-top: .35rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .form-check-input:checked {
+    /* Set the colour behind this element. */
     background-color: var(--forest);
+    /* Choose the colour of this element's border. */
     border-color: var(--forest);
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .form-check-input:focus {
+    /* Choose the colour of this element's border. */
     border-color: #658946;
+    /* Add a soft shadow to separate this surface from its background. */
     box-shadow: 0 0 0 .2rem #8ba96526;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .form-check-label {
+    /* Set the text size; clamp values let it scale between readable limits. */
     font-size: .8rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .demo-note {
+    /* Set the background colour or image behind this element. */
     background: #edf0e6;
+    /* Draw a divider or accent along the left side. */
     border-left: 3px solid #a6bf78;
+    /* Set the space between the content and its border. */
     padding: .9rem 1rem;
+    /* Set the text size; clamp values let it scale between readable limits. */
     font-size: .77rem;
+    /* Set the text colour for this element. */
     color: var(--forest);
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .optional-label {
+    /* Choose how light or bold the text should look. */
     font-weight: 400;
+    /* Set the text colour for this element. */
     color: var(--muted);
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .character-count {
+    /* Align the text inside this element. */
     text-align: right;
+    /* Use equal-width digits so a changing character count stays steady. */
     font-variant-numeric: tabular-nums;
+/* Finish this style rule or condition. */
 }
 
-/* The confirmation remains on the page and can be read again after submission. */
+/* Apply the following styles to the elements matched by this selector. */
 .confirmation {
+    /* Set the background colour or image behind this element. */
     background: #e9f1dd;
+    /* Set the border width, style, and colour together. */
     border: 1px solid #b5cb99;
+    /* Round these corners using the chosen sizes. */
     border-radius: 4px;
+    /* Set the space between the content and its border. */
     padding: 1.2rem;
+    /* Add space above this element. */
     margin-top: 1.5rem;
+    /* Allow long submitted text to wrap instead of stretching the layout. */
     overflow-wrap: anywhere;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .confirmation h3 {
+    /* Set the text size; clamp values let it scale between readable limits. */
     font-size: 1.1rem;
+    /* Choose how light or bold the text should look. */
     font-weight: 650;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .confirmation p {
+    /* Set the text size; clamp values let it scale between readable limits. */
     font-size: .85rem;
+    /* Add space below this element. */
     margin-bottom: .4rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .confirmation dl {
+    /* Set the outside spacing above and below the element. */
     margin-block: 1rem;
+    /* Set the text size; clamp values let it scale between readable limits. */
     font-size: .85rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .confirmation dt {
+    /* Choose how light or bold the text should look. */
     font-weight: 650;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .confirmation dd {
+    /* Add space below this element. */
     margin-bottom: .6rem;
+    /* Preserve message line breaks while still allowing normal wrapping. */
     white-space: pre-wrap;
+/* Finish this style rule or condition. */
 }
 
+/* Apply these rules only when the screen matches this width condition. */
 @media (max-width: 575.98px) {
+    /* Apply the following styles to the elements matched by this selector. */
     .form-panel {
+        /* Set the space between the content and its border. */
         padding: 1.4rem;
+    /* Finish this style rule or condition. */
     }
 
+    /* Apply the following styles to the elements matched by this selector. */
     .join-section {
+        /* Set the padding above and below the content. */
         padding-block: 2.5rem;
+    /* Finish this style rule or condition. */
     }
+
+/* Finish this style rule or condition. */
 }

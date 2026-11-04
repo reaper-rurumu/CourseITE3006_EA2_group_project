@@ -1,655 +1,1179 @@
-/* These colours keep Bootstrap components and our own styles on the same theme. */
+/* Store shared theme settings at the document level. */
 :root {
+  /* Store the main dark green colour for reuse throughout the design. */
   --forest: #173b2c;
+  /* Store a deeper green for dark backgrounds and pressed buttons. */
   --forest-deep: #102b21;
+  /* Store the light green accent colour. */
   --lime: #d7ed9c;
+  /* Store the warm off-white page colour. */
   --paper: #f8f8f0;
+  /* Store the main readable text colour. */
   --ink: #233b30;
+  /* Store a softer text colour for supporting details. */
   --muted: #5b6b60;
+  /* Store the colour used for borders and dividers. */
   --line: #dce2d5;
+  /* Tell Bootstrap which font family the pages should use. */
   --bs-body-font-family: "Segoe UI", Arial, sans-serif;
+  /* Tell Bootstrap to use our main text colour. */
   --bs-body-color: var(--ink);
+  /* Tell Bootstrap to use our warm page background. */
   --bs-body-bg: var(--paper);
+  /* Set Bootstrap's default link colour. */
   --bs-link-color: var(--forest);
+  /* Set Bootstrap's link colour when the pointer is over a link. */
   --bs-link-hover-color: #436d3e;
+/* Finish this style rule or condition. */
 }
 
-/* Border-box makes widths predictable; smooth scrolling is switched off below for reduced motion. */
+/* Apply the following styles to the elements matched by this selector. */
 * {
+  /* Include padding and borders inside the declared width and height. */
   box-sizing: border-box;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 html {
+  /* Choose whether links scroll smoothly or move directly to their target. */
   scroll-behavior: smooth;
+  /* Leave space above a section when a link scrolls to it. */
   scroll-padding-top: 6rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 body {
+  /* Set the empty space outside this element. */
   margin: 0;
+  /* Set the distance between lines so text stays readable. */
   line-height: 1.7;
+  /* Use smoother text edges in browsers that support this setting. */
   -webkit-font-smoothing: antialiased;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 img {
+  /* Limit how wide this element can grow. */
   max-width: 100%;
+  /* Choose how this element participates in the page layout. */
   display: block;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 a {
+  /* Leave a little space between link text and its underline. */
   text-underline-offset: .22em;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 button,
+/* Apply the following styles to the elements matched by this selector. */
 input,
+/* Apply the following styles to the elements matched by this selector. */
 select,
+/* Apply the following styles to the elements matched by this selector. */
 textarea {
+  /* Use the same font settings as the surrounding content. */
   font: inherit;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 ::selection {
+  /* Set the background colour or image behind this element. */
   background: var(--lime);
+  /* Set the text colour for this element. */
   color: var(--forest-deep);
+/* Finish this style rule or condition. */
 }
 
-/* A visible focus ring helps people move around without a mouse. */
+/* Apply the following styles to the elements matched by this selector. */
 :focus-visible {
+  /* Draw a clear focus outline for keyboard users. */
   outline: 3px solid #739943;
+  /* Leave space between the element and its focus outline. */
   outline-offset: 5px;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .skip-link {
+  /* Choose how this element is positioned relative to the page or its parent. */
   position: fixed;
+  /* Set the distance from the left side of the positioning area. */
   left: 1rem;
+  /* Set the distance from the top of the positioning area. */
   top: -6rem;
+  /* Choose which overlapping elements appear in front. */
   z-index: 1100;
+  /* Set the background colour or image behind this element. */
   background: var(--lime);
+  /* Set the space between the content and its border. */
   padding: .65rem 1rem;
+  /* Set the text colour for this element. */
   color: var(--forest);
+  /* Round these corners using the chosen sizes. */
   border-radius: .3rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .skip-link:focus {
+  /* Set the distance from the top of the positioning area. */
   top: .75rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .container {
+  /* Limit how wide this element can grow. */
   max-width: 1200px;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .section-space {
+  /* Set the padding above and below the content. */
   padding-block: 6rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .eyebrow {
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: .72rem;
+  /* Choose how light or bold the text should look. */
   font-weight: 700;
+  /* Adjust the space between letters. */
   letter-spacing: .17em;
+  /* Choose whether the displayed text uses uppercase or its original case. */
   text-transform: uppercase;
+  /* Choose how this element participates in the page layout. */
   display: block;
+  /* Add space below this element. */
   margin-bottom: 1.1rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .section-title {
+  /* Choose the font, followed by fallback fonts if it is unavailable. */
   font-family: Georgia, "Times New Roman", serif;
+  /* Choose how light or bold the text should look. */
   font-weight: 400;
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: clamp(2.3rem, 4vw, 3.6rem);
+  /* Set the distance between lines so text stays readable. */
   line-height: 1.12;
+  /* Adjust the space between letters. */
   letter-spacing: -.045em;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .text-soft {
+  /* Set the text colour for this element. */
   color: var(--muted);
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .text-link {
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: .86rem;
+  /* Choose how light or bold the text should look. */
   font-weight: 650;
+  /* Choose whether this text has an underline or other decoration. */
   text-decoration: none;
+  /* Choose how this element participates in the page layout. */
   display: inline-flex;
+  /* Align children across the secondary axis of a flex or grid layout. */
   align-items: center;
+  /* Leave this much space between neighbouring layout items. */
   gap: .7rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .text-link:hover {
+  /* Choose whether this text has an underline or other decoration. */
   text-decoration: underline;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .arrow {
+  /* Choose how this element participates in the page layout. */
   display: inline-block;
+  /* Animate supported style changes, such as hover effects. */
   transition: transform .2s ease;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 a:hover .arrow {
+  /* Move or rotate the element without rearranging nearby content. */
   transform: translate(3px, -2px);
+/* Finish this style rule or condition. */
 }
 
-/* Bootstrap handles the mobile menu; these rules only change its appearance. */
+/* Apply the following styles to the elements matched by this selector. */
 .site-header {
+  /* Set the background colour or image behind this element. */
   background: var(--paper);
+  /* Draw a divider below this element. */
   border-bottom: 1px solid var(--line);
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .navbar {
+  /* Keep the element at least this tall while allowing it to grow. */
   min-height: 90px;
+  /* Set the regular Bootstrap navigation text colour. */
   --bs-navbar-color: var(--forest);
+  /* Set the navigation text colour on hover. */
   --bs-navbar-hover-color: #588143;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .navbar-brand {
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: 1.42rem;
+  /* Set the text colour for this element. */
   color: var(--forest);
+  /* Choose how light or bold the text should look. */
   font-weight: 750;
+  /* Adjust the space between letters. */
   letter-spacing: -.055em;
+  /* Choose how this element participates in the page layout. */
   display: flex;
+  /* Align children across the secondary axis of a flex or grid layout. */
   align-items: center;
+  /* Leave this much space between neighbouring layout items. */
   gap: .55rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .brand-icon {
+  /* Set the width available to this element. */
   width: 30px;
+  /* Set the height of this element. */
   height: 34px;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .nav-link {
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: .84rem;
+  /* Set the space between the content and its border. */
   padding: .7rem 0 !important;
+  /* Set the outside spacing on both reading-direction sides. */
   margin-inline: 1.15rem;
+  /* Draw a divider below this element. */
   border-bottom: 1px solid transparent;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .nav-link[aria-current="page"] {
+  /* Choose the colour of this element's border. */
   border-color: var(--forest);
+  /* Choose how light or bold the text should look. */
   font-weight: 650;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .navbar-toggler {
+  /* Set the space between the content and its border. */
   padding: .45rem;
+  /* Choose the colour of this element's border. */
   border-color: #bbcbb8;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .nav-join {
+  /* Add space to the left of this element. */
   margin-left: 1.4rem;
+/* Finish this style rule or condition. */
 }
 
-/* Buttons use a custom Bootstrap colour palette with clear hover and disabled states. */
+/* Apply the following styles to the elements matched by this selector. */
 .btn {
+  /* Round these corners using the chosen sizes. */
   border-radius: 5px;
+  /* Set the space between the content and its border. */
   padding: .85rem 1.4rem;
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: .85rem;
+  /* Choose how light or bold the text should look. */
   font-weight: 650;
+  /* Animate supported style changes, such as hover effects. */
   transition: background-color .2s ease, color .2s ease, transform .2s ease;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .btn:hover {
+  /* Move or rotate the element without rearranging nearby content. */
   transform: translateY(-2px);
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .btn-forest {
+  /* Set the Bootstrap button text colour in its normal state. */
   --bs-btn-color: #fff;
+  /* Set the Bootstrap button background colour in its normal state. */
   --bs-btn-bg: var(--forest);
+  /* Set the Bootstrap button border colour in its normal state. */
   --bs-btn-border-color: var(--forest);
+  /* Set the Bootstrap button text colour when the pointer is over it. */
   --bs-btn-hover-color: #fff;
+  /* Set the Bootstrap button background colour when the pointer is over it. */
   --bs-btn-hover-bg: #28553e;
+  /* Set the Bootstrap button border colour when the pointer is over it. */
   --bs-btn-hover-border-color: #28553e;
+  /* Set the Bootstrap button text colour while it is pressed. */
   --bs-btn-active-color: #fff;
+  /* Set the Bootstrap button background colour while it is pressed. */
   --bs-btn-active-bg: var(--forest-deep);
+  /* Set the Bootstrap button border colour while it is pressed. */
   --bs-btn-active-border-color: var(--forest-deep);
+  /* Set the Bootstrap button text colour when it is disabled. */
   --bs-btn-disabled-color: #fff;
+  /* Set the Bootstrap button background colour when it is disabled. */
   --bs-btn-disabled-bg: #64796b;
+  /* Set the Bootstrap button border colour when it is disabled. */
   --bs-btn-disabled-border-color: #64796b;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .btn-lime {
+  /* Set the Bootstrap button text colour in its normal state. */
   --bs-btn-color: var(--forest);
+  /* Set the Bootstrap button background colour in its normal state. */
   --bs-btn-bg: var(--lime);
+  /* Set the Bootstrap button border colour in its normal state. */
   --bs-btn-border-color: var(--lime);
+  /* Set the Bootstrap button text colour when the pointer is over it. */
   --bs-btn-hover-color: var(--forest);
+  /* Set the Bootstrap button background colour when the pointer is over it. */
   --bs-btn-hover-bg: #e6f5bb;
+  /* Set the Bootstrap button border colour when the pointer is over it. */
   --bs-btn-hover-border-color: #e6f5bb;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .btn-outline-forest {
+  /* Set the Bootstrap button text colour in its normal state. */
   --bs-btn-color: var(--forest);
+  /* Set the Bootstrap button border colour in its normal state. */
   --bs-btn-border-color: #a4b39d;
+  /* Set the Bootstrap button text colour when the pointer is over it. */
   --bs-btn-hover-color: #fff;
+  /* Set the Bootstrap button background colour when the pointer is over it. */
   --bs-btn-hover-bg: var(--forest);
+  /* Set the Bootstrap button border colour when the pointer is over it. */
   --bs-btn-hover-border-color: var(--forest);
+/* Finish this style rule or condition. */
 }
 
-/* The large photograph and dark overlay keep the hero expressive and its text readable. */
+/* Apply the following styles to the elements matched by this selector. */
 .hero {
+  /* Choose how this element is positioned relative to the page or its parent. */
   position: relative;
+  /* Set the background colour or image behind this element. */
   background: var(--forest-deep);
+  /* Set the text colour for this element. */
   color: #fff;
+  /* Keep the element at least this tall while allowing it to grow. */
   min-height: 650px;
+  /* Choose how this element participates in the page layout. */
   display: flex;
+  /* Align children across the secondary axis of a flex or grid layout. */
   align-items: center;
+  /* Choose whether content outside this box is clipped or left visible. */
   overflow: hidden;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .hero-photo {
+  /* Choose how this element is positioned relative to the page or its parent. */
   position: absolute;
+  /* Set all four positioning edges together. */
   inset: 0;
+  /* Set the height of this element. */
   height: 100%;
+  /* Set the width available to this element. */
   width: 100%;
+  /* Crop the image to fill its box while keeping its original proportions. */
   object-fit: cover;
+  /* Choose which part of a cropped image stays in view. */
   object-position: center 55%;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .hero::after {
+  /* Create the CSS-only layer used by this pseudo-element. */
   content: "";
+  /* Choose how this element is positioned relative to the page or its parent. */
   position: absolute;
+  /* Set all four positioning edges together. */
   inset: 0;
+  /* Set the background colour or image behind this element. */
   background: linear-gradient(90deg, rgba(9, 31, 21, .86), rgba(9, 31, 21, .5) 55%, rgba(9, 31, 21, .17));
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .hero-content {
+  /* Choose how this element is positioned relative to the page or its parent. */
   position: relative;
+  /* Choose which overlapping elements appear in front. */
   z-index: 1;
+  /* Set the padding above and below the content. */
   padding-block: 5rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .hero .eyebrow {
+  /* Set the text colour for this element. */
   color: var(--lime);
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .hero h1 {
+  /* Choose the font, followed by fallback fonts if it is unavailable. */
   font-family: Georgia, "Times New Roman", serif;
+  /* Choose how light or bold the text should look. */
   font-weight: 400;
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: clamp(3.4rem, 6.5vw, 6rem);
+  /* Set the distance between lines so text stays readable. */
   line-height: 1.02;
+  /* Adjust the space between letters. */
   letter-spacing: -.055em;
+  /* Limit how wide this element can grow. */
   max-width: 770px;
+  /* Add space below this element. */
   margin-bottom: 1.6rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .hero h1 em {
+  /* Choose how light or bold the text should look. */
   font-weight: 400;
+  /* Set the text colour for this element. */
   color: var(--lime);
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .hero-description {
+  /* Set the text colour for this element. */
   color: #e3e9df;
+  /* Limit how wide this element can grow. */
   max-width: 435px;
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: 1rem;
+  /* Add space below this element. */
   margin-bottom: 2rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .hero-secondary {
+  /* Set the text colour for this element. */
   color: #fff;
+  /* Choose whether this text has an underline or other decoration. */
   text-decoration: none;
+  /* Set the space between the content and its border. */
   padding: .85rem .35rem;
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: .85rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .hero-secondary:hover {
+  /* Set the text colour for this element. */
   color: var(--lime);
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .hero-note {
+  /* Choose how this element is positioned relative to the page or its parent. */
   position: absolute;
+  /* Set the distance from the bottom of the positioning area. */
   bottom: 1.5rem;
+  /* Set the distance from the right side of the positioning area. */
   right: max(1.5rem, calc((100vw - 1176px) / 2));
+  /* Choose which overlapping elements appear in front. */
   z-index: 1;
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: .65rem;
+  /* Choose whether the displayed text uses uppercase or its original case. */
   text-transform: uppercase;
+  /* Adjust the space between letters. */
   letter-spacing: .15em;
+  /* Set the text colour for this element. */
   color: #e0e8d9;
+/* Finish this style rule or condition. */
 }
 
-/* This strip introduces our three focus areas without inventing impact statistics. */
+/* Apply the following styles to the elements matched by this selector. */
 .focus-strip {
+  /* Set the background colour or image behind this element. */
   background: var(--lime);
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .focus-item {
+  /* Set the space between the content and its border. */
   padding: 1.4rem 1rem;
+  /* Choose how this element participates in the page layout. */
   display: flex;
+  /* Leave this much space between neighbouring layout items. */
   gap: .85rem;
+  /* Align children across the secondary axis of a flex or grid layout. */
   align-items: center;
+  /* Distribute children along the main axis of this layout. */
   justify-content: center;
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: .82rem;
+  /* Choose how light or bold the text should look. */
   font-weight: 600;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .focus-item span {
+  /* Choose the font, followed by fallback fonts if it is unavailable. */
   font-family: Georgia, serif;
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: 1.4rem;
+  /* Choose whether this text uses normal or italic styling. */
   font-style: italic;
+  /* Choose how light or bold the text should look. */
   font-weight: 400;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .focus-item+.focus-item {
+  /* Draw a divider or accent along the left side. */
   border-left: 1px solid #b6cf8b;
+/* Finish this style rule or condition. */
 }
 
-/* Photography gets its own space, with a small editorial label instead of a decorative card. */
+/* Apply the following styles to the elements matched by this selector. */
 .story-photo {
+  /* Set the width available to this element. */
   width: 100%;
+  /* Set the height of this element. */
   height: 440px;
+  /* Crop the image to fill its box while keeping its original proportions. */
   object-fit: cover;
+  /* Round these corners using the chosen sizes. */
   border-radius: 4px 70px 4px 4px;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .photo-caption {
+  /* Choose how this element participates in the page layout. */
   display: flex;
+  /* Distribute children along the main axis of this layout. */
   justify-content: space-between;
+  /* Leave this much space between neighbouring layout items. */
   gap: 1rem;
+  /* Set the text colour for this element. */
   color: var(--muted);
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: .7rem;
+  /* Add space above this element. */
   margin-top: .75rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .principle {
+  /* Set the padding above and below the content. */
   padding-block: 1rem;
+  /* Draw a divider below this element. */
   border-bottom: 1px solid var(--line);
+  /* Choose how this element participates in the page layout. */
   display: flex;
+  /* Leave this much space between neighbouring layout items. */
   gap: 1.3rem;
+  /* Align children across the secondary axis of a flex or grid layout. */
   align-items: start;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .principle-number {
+  /* Set the text colour for this element. */
   color: #6b8153;
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: .75rem;
+  /* Add space above the content inside this element. */
   padding-top: .2rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .principle h3 {
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: .95rem;
+  /* Add space below this element. */
   margin-bottom: .3rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .principle p {
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: .85rem;
+  /* Set the text colour for this element. */
   color: var(--muted);
+  /* Set the empty space outside this element. */
   margin: 0;
+/* Finish this style rule or condition. */
 }
 
-/* Activity cards remain real links and readable content even when JavaScript is unavailable. */
+/* Apply the following styles to the elements matched by this selector. */
 .activities-section {
+  /* Set the background colour or image behind this element. */
   background: #edf0e6;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .activity-card {
+  /* Give Bootstrap cards our shared page background colour. */
   --bs-card-bg: var(--paper);
+  /* Choose whether Bootstrap cards have a visible border. */
   --bs-card-border-width: 0;
+  /* Round these corners using the chosen sizes. */
   border-radius: 5px;
+  /* Choose whether content outside this box is clipped or left visible. */
   overflow: hidden;
+  /* Set the height of this element. */
   height: 100%;
+  /* Animate supported style changes, such as hover effects. */
   transition: transform .25s ease, box-shadow .25s ease;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .activity-card:hover {
+  /* Move or rotate the element without rearranging nearby content. */
   transform: translateY(-5px);
+  /* Add a soft shadow to separate this surface from its background. */
   box-shadow: 0 14px 28px #173b2c12;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .activity-image {
+  /* Set the width available to this element. */
   width: 100%;
+  /* Set the height of this element. */
   height: 225px;
+  /* Crop the image to fill its box while keeping its original proportions. */
   object-fit: cover;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .activity-card .card-body {
+  /* Set the space between the content and its border. */
   padding: 1.7rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .activity-category {
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: .65rem;
+  /* Choose whether the displayed text uses uppercase or its original case. */
   text-transform: uppercase;
+  /* Adjust the space between letters. */
   letter-spacing: .12em;
+  /* Set the text colour for this element. */
   color: #557247;
+  /* Choose how light or bold the text should look. */
   font-weight: 700;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .activity-card h3 {
+  /* Choose the font, followed by fallback fonts if it is unavailable. */
   font-family: Georgia, serif;
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: 1.6rem;
+  /* Adjust the space between letters. */
   letter-spacing: -.035em;
+  /* Set the outside spacing above and below the element. */
   margin-block: .65rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .activity-card p {
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: .85rem;
+  /* Set the text colour for this element. */
   color: var(--muted);
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .activity-meta {
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: .72rem;
+  /* Set the text colour for this element. */
   color: var(--muted);
+  /* Set the padding above and below the content. */
   padding-block: .9rem;
+  /* Draw a divider above this element. */
   border-top: 1px solid var(--line);
+  /* Add space above this element. */
   margin-top: 1.4rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .demo-label {
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: .72rem;
+  /* Set the text colour for this element. */
   color: var(--muted);
+/* Finish this style rule or condition. */
 }
 
-/* The final invitation gives visitors a clear next step. */
+/* Apply the following styles to the elements matched by this selector. */
 .invitation {
+  /* Set the background colour or image behind this element. */
   background: var(--forest);
+  /* Set the text colour for this element. */
   color: #fff;
+  /* Choose how this element is positioned relative to the page or its parent. */
   position: relative;
+  /* Choose whether content outside this box is clipped or left visible. */
   overflow: hidden;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .invitation .eyebrow {
+  /* Set the text colour for this element. */
   color: var(--lime);
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .invitation p {
+  /* Set the text colour for this element. */
   color: #cfdbce;
+  /* Limit how wide this element can grow. */
   max-width: 430px;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .invitation .section-title {
+  /* Limit how wide this element can grow. */
   max-width: 630px;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .invitation-art {
+  /* Set the width available to this element. */
   width: 180px;
+  /* Set how transparent the element appears. */
   opacity: .65;
+  /* Move or rotate the element without rearranging nearby content. */
   transform: rotate(-15deg);
+/* Finish this style rule or condition. */
 }
 
-/* Footer links include outside resources and an honest demo disclosure. */
+/* Apply the following styles to the elements matched by this selector. */
 .site-footer {
+  /* Set the space between the content and its border. */
   padding: 3.5rem 0 1.5rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .footer-copy {
+  /* Limit how wide this element can grow. */
   max-width: 270px;
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: .8rem;
+  /* Set the text colour for this element. */
   color: var(--muted);
+  /* Add space above this element. */
   margin-top: 1rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .footer-heading {
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: .7rem;
+  /* Choose how light or bold the text should look. */
   font-weight: 700;
+  /* Choose whether the displayed text uses uppercase or its original case. */
   text-transform: uppercase;
+  /* Adjust the space between letters. */
   letter-spacing: .12em;
+  /* Add space below this element. */
   margin-bottom: 1rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .footer-links {
+  /* Choose whether this list displays default markers. */
   list-style: none;
+  /* Set the space between the content and its border. */
   padding: 0;
+  /* Set the empty space outside this element. */
   margin: 0;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .footer-links li {
+  /* Add space below this element. */
   margin-bottom: .5rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .footer-links a {
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: .8rem;
+  /* Choose whether this text has an underline or other decoration. */
   text-decoration: none;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .footer-links a:hover {
+  /* Choose whether this text has an underline or other decoration. */
   text-decoration: underline;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .footer-bottom {
+  /* Draw a divider above this element. */
   border-top: 1px solid var(--line);
+  /* Add space above this element. */
   margin-top: 2.5rem;
+  /* Add space above the content inside this element. */
   padding-top: 1.3rem;
+  /* Set the text colour for this element. */
   color: var(--muted);
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: .7rem;
+  /* Choose how this element participates in the page layout. */
   display: flex;
+  /* Distribute children along the main axis of this layout. */
   justify-content: space-between;
+  /* Leave this much space between neighbouring layout items. */
   gap: 1rem;
+  /* Allow layout items to move onto another line when space is limited. */
   flex-wrap: wrap;
+/* Finish this style rule or condition. */
 }
 
-/* Inner pages share this quieter heading style. */
+/* Apply the following styles to the elements matched by this selector. */
 .page-intro {
+  /* Set the padding above and below the content. */
   padding-block: 4rem 3rem;
+  /* Draw a divider below this element. */
   border-bottom: 1px solid var(--line);
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .page-intro h1 {
+  /* Choose the font, followed by fallback fonts if it is unavailable. */
   font-family: Georgia, serif;
+  /* Choose how light or bold the text should look. */
   font-weight: 400;
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: clamp(2.8rem, 6vw, 4.7rem);
+  /* Set the distance between lines so text stays readable. */
   line-height: 1.07;
+  /* Adjust the space between letters. */
   letter-spacing: -.05em;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .page-intro p {
+  /* Limit how wide this element can grow. */
   max-width: 540px;
+  /* Set the text colour for this element. */
   color: var(--muted);
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .breadcrumb {
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: .75rem;
+  /* Add space below this element. */
   margin-bottom: 2.3rem;
+  /* Choose the colour of the breadcrumb separators. */
   --bs-breadcrumb-divider-color: #7e8c7b;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .breadcrumb a {
+  /* Set the text colour for this element. */
   color: var(--muted);
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .resource-box {
+  /* Set the border width, style, and colour together. */
   border: 1px solid var(--line);
+  /* Round these corners using the chosen sizes. */
   border-radius: 5px;
+  /* Set the space between the content and its border. */
   padding: 2rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .resource-box h2 {
+  /* Choose the font, followed by fallback fonts if it is unavailable. */
   font-family: Georgia, serif;
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: 1.8rem;
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .resource-box p {
+  /* Set the text colour for this element. */
   color: var(--muted);
+  /* Set the text size; clamp values let it scale between readable limits. */
   font-size: .9rem;
+/* Finish this style rule or condition. */
 }
 
-/* This short entrance effect does not hide content if JavaScript fails. */
+/* Define the start and end states of the entrance animation. */
 @keyframes arrive {
+  /* Choose how the element looks at the beginning of the animation. */
   from {
+    /* Set how transparent the element appears. */
     opacity: .3;
+    /* Move or rotate the element without rearranging nearby content. */
     transform: translateY(16px);
+  /* Finish this style rule or condition. */
   }
 
+  /* Choose how the element looks at the end of the animation. */
   to {
+    /* Set how transparent the element appears. */
     opacity: 1;
+    /* Move or rotate the element without rearranging nearby content. */
     transform: translateY(0);
+  /* Finish this style rule or condition. */
   }
+
+/* Finish this style rule or condition. */
 }
 
+/* Apply the following styles to the elements matched by this selector. */
 .hero-content {
+  /* Play the selected entrance effect, unless reduced motion disables it. */
   animation: arrive .8s ease-out both;
+/* Finish this style rule or condition. */
 }
 
-/* Compact screens stack content and make navigation easier to tap. */
+/* Apply these rules only when the screen matches this width condition. */
 @media (max-width: 991.98px) {
+  /* Apply the following styles to the elements matched by this selector. */
   .navbar {
+    /* Keep the element at least this tall while allowing it to grow. */
     min-height: 76px;
+  /* Finish this style rule or condition. */
   }
 
+  /* Apply the following styles to the elements matched by this selector. */
   .navbar-collapse {
+    /* Set the padding above and below the content. */
     padding-block: .75rem 1rem;
+  /* Finish this style rule or condition. */
   }
 
+  /* Apply the following styles to the elements matched by this selector. */
   .nav-link {
+    /* Set the empty space outside this element. */
     margin: 0;
+    /* Set the width available to this element. */
     width: fit-content;
+  /* Finish this style rule or condition. */
   }
 
+  /* Apply the following styles to the elements matched by this selector. */
   .nav-join {
+    /* Set the empty space outside this element. */
     margin: .75rem 0 0;
+  /* Finish this style rule or condition. */
   }
 
+  /* Apply the following styles to the elements matched by this selector. */
   .hero {
+    /* Keep the element at least this tall while allowing it to grow. */
     min-height: 610px;
+  /* Finish this style rule or condition. */
   }
 
+  /* Apply the following styles to the elements matched by this selector. */
   .section-space {
+    /* Set the padding above and below the content. */
     padding-block: 4rem;
+  /* Finish this style rule or condition. */
   }
+
+/* Finish this style rule or condition. */
 }
 
+/* Apply these rules only when the screen matches this width condition. */
 @media (max-width: 575.98px) {
+  /* Apply the following styles to the elements matched by this selector. */
   .container {
+    /* Set the padding on the two reading-direction sides. */
     padding-inline: 1.35rem;
+  /* Finish this style rule or condition. */
   }
 
+  /* Apply the following styles to the elements matched by this selector. */
   .hero {
+    /* Keep the element at least this tall while allowing it to grow. */
     min-height: 610px;
+  /* Finish this style rule or condition. */
   }
 
+  /* Apply the following styles to the elements matched by this selector. */
   .hero-content {
+    /* Set the padding above and below the content. */
     padding-block: 3.5rem 5rem;
+  /* Finish this style rule or condition. */
   }
 
+  /* Apply the following styles to the elements matched by this selector. */
   .hero h1 {
+    /* Set the text size; clamp values let it scale between readable limits. */
     font-size: 3.55rem;
+  /* Finish this style rule or condition. */
   }
 
+  /* Apply the following styles to the elements matched by this selector. */
   .hero-note {
+    /* Set the distance from the left side of the positioning area. */
     left: 1.35rem;
+    /* Set the distance from the right side of the positioning area. */
     right: auto;
+  /* Finish this style rule or condition. */
   }
 
+  /* Apply the following styles to the elements matched by this selector. */
   .focus-item {
+    /* Set the text size; clamp values let it scale between readable limits. */
     font-size: .64rem;
+    /* Set the space between the content and its border. */
     padding: 1rem .35rem;
+    /* Leave this much space between neighbouring layout items. */
     gap: .35rem;
+  /* Finish this style rule or condition. */
   }
 
+  /* Apply the following styles to the elements matched by this selector. */
   .focus-item span {
+    /* Set the text size; clamp values let it scale between readable limits. */
     font-size: 1rem;
+  /* Finish this style rule or condition. */
   }
 
+  /* Apply the following styles to the elements matched by this selector. */
   .story-photo {
+    /* Set the height of this element. */
     height: 340px;
+  /* Finish this style rule or condition. */
   }
 
+  /* Apply the following styles to the elements matched by this selector. */
   .section-space {
+    /* Set the padding above and below the content. */
     padding-block: 3.5rem;
+  /* Finish this style rule or condition. */
   }
 
+  /* Apply the following styles to the elements matched by this selector. */
   .page-intro {
+    /* Set the padding above and below the content. */
     padding-block: 2rem;
+  /* Finish this style rule or condition. */
   }
+
+/* Finish this style rule or condition. */
 }
 
-/* Motion preferences apply to Bootstrap transitions and our own effects. */
+/* Apply these rules when the visitor asks for less animation. */
 @media (prefers-reduced-motion: reduce) {
+  /* Apply the following styles to the elements matched by this selector. */
   html {
+    /* Choose whether links scroll smoothly or move directly to their target. */
     scroll-behavior: auto;
+  /* Finish this style rule or condition. */
   }
 
+  /* Apply the following styles to the elements matched by this selector. */
   *,
+  /* Apply the following styles to the elements matched by this selector. */
   *::before,
+  /* Apply the following styles to the elements matched by this selector. */
   *::after {
+    /* Play the selected entrance effect, unless reduced motion disables it. */
     animation: none !important;
+    /* Animate supported style changes, such as hover effects. */
     transition: none !important;
+  /* Finish this style rule or condition. */
   }
+
+/* Finish this style rule or condition. */
 }

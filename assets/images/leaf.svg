@@ -1,5 +1,8 @@
-<!-- A small original vector leaf acts as the club logo and browser icon. -->
+<!-- Set up the drawing area so this illustration scales cleanly. -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 56" fill="none">
+<!-- Draw this part of the illustration using the listed points, curves, and colours. -->
   <path d="M40 3C15 3 3 17 7 34c5 16 23 14 30 1C43 24 39 14 40 3Z" fill="#173b2c"/>
+<!-- Draw this part of the illustration using the listed points, curves, and colours. -->
   <path d="M10 53C11 38 22 25 34 13M15 37l-1-14m10 3 10-1" stroke="#a8c675" stroke-width="2.5" stroke-linecap="round"/>
+<!-- Finish the scalable illustration. -->
 </svg>
